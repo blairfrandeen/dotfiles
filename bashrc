@@ -70,10 +70,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # only display the hostname if away from my regular machine, or on ssh
-if [ $HOSTNAME="DESKTOP-DG4RQIH" ]; then
+echo "Hostname is $HOSTNAME"
+if [ "$HOSTNAME" = 'DESKTOP-DG4RQIH' ]; then
     HN=""
 else
-    HN="\u@\h"
+    HN="\e[0;31m\u@\h: \e[m"
 fi
 
 if [ "$color_prompt" = yes ]; then
