@@ -6,16 +6,17 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "Copying Blair's dotfiles from $BASEDIR..."
 
 # vim
-ln -s ${BASEDIR}/vimrc ~/.vimrc
-ln -s ${BASEDIR}/vim ~/.vim
+ln -sf ${BASEDIR}/vimrc ~/.vimrc
+ln -sf ${BASEDIR}/vim ~/.vim
 
 # bash
-ln -s ${BASEDIR}/bashrc ~/.bashrc
-ln -s ${BASEDIR}/inputrc ~/.inputrc
+ln -sf ${BASEDIR}/bashrc ~/.bashrc
+ln -sf ${BASEDIR}/inputrc ~/.inputrc
 
 #git
-ln -s ${BASEDIR}/gitconfig ~/.gitconfig
+ln -sf ${BASEDIR}/gitconfig ~/.gitconfig
 
 # Download submodules
 echo "Getting submodules..."
+cd $BASEDIR
 git submodule update --init --remote
