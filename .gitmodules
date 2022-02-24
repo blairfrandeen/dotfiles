@@ -1,0 +1,21 @@
+[submodule "vim/pack/vendor/start/nerdcommenter"]
+	path = vim/pack/vendor/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter
+[submodule "vim/pack/vendor/start/python-syntax"]
+	path = vim/pack/vendor/start/python-syntax
+	url = https://github.com/vim-python/python-syntax
+[submodule "vim/pack/vendor/opt/carbonized"]
+	path = vim/pack/vendor/opt/carbonized
+	url = https://github.com/haystackandroid/carbonized
+[submodule "vim/pack/vendor/opt/papercolor-theme"]
+	path = vim/pack/vendor/opt/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule "vim/pack/vendor/start/gruvbox"]
+	path = vim/pack/vendor/start/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vim/pack/vendor/start/vim-cpp-modern"]
+	path = vim/pack/vendor/start/vim-cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern
+[submodule "vim/pack/vendor/start/vim-surround"]
+	path = vim/pack/vendor/start/vim-surround
+	url = https://github.com/tpope/vim-surround
