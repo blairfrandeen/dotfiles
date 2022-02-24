@@ -3,7 +3,7 @@
 # establish the base directory that I'm working out of
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "Copying files from $BASEDIR..."
+echo "Copying Blair's dotfiles from $BASEDIR..."
 
 # vim
 ln -s ${BASEDIR}/vimrc ~/.vimrc
@@ -16,3 +16,6 @@ ln -s ${BASEDIR}/inputrc ~/.inputrc
 #git
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
 
+# Download submodules
+echo "Getting submodules..."
+git submodule update --init --remote
