@@ -1,7 +1,4 @@
-" Remap escape key, does this file do anything else?
-"inoremap kj <Esc>
-"inoremap kJ <Esc>
-"vnoremap kj <Esc>
+" Remap the escape key on the keyboard or through the OS ;)
 
 " Leader key
 let mapleader = ","
@@ -57,41 +54,19 @@ let &t_EI = "\e[2 q"
 " Enable filetype plugins
 filetype plugin on
 
-" Vim Plugin Section
-" -------------------
-"call plug#begin('~/.vim/plugged')
-
-" Nerd Commenter
-"Plug 'preservim/nerdcommenter'
-
-" Python Syntax Highlighting
-"Plug 'vim-python/python-syntax'
-
-" Themes
-"Plug 'haystackandroid/carbonized' 
-"Plug 'NLKNguyen/papercolor-theme'
-"Plug 'morhetz/gruvbox'
-
-" Surround
-"Plug 'tpope/vim-surround'
-
-"call plug#end()
-" End of Plugin Section
-" ---------------------
-
-" colorscheme carbonized-dark
-let g:carbonized_dark_CursorLineNr = 'off'
-
 let g:python_highlight_all = 1
 
+" Enable color scheme
 set t_Co=256
 set background=dark
 autocmd vimenter * ++nested colorscheme gruvbox
+
 autocmd BufNewFile,BufRead * setlocal formatoptions=tcq
 
 " Autoindent, tabs as four spaces
 set ai ts=4 sw=4 sts=4 et
 
+" Remember folds
 augroup remember_folds
   autocmd!
   autocmd BufWinLeave * mkview
