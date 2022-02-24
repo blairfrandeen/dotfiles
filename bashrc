@@ -69,15 +69,22 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# only display the hostname if away from my regular machine, or on ssh
+if [ $HOSTNAME="DESKTOP-DG4RQIH" ]; then
+    HN=""
+else
+    HN="\u@\h"
+fi
+
 if [ "$color_prompt" = yes ]; then
     # old versions below
     # original
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     # modified (no computer name)
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]> '
-    PS1='\e[0;36m\033[01;32m\w >\e[m'
+    PS1="${debian_chroot:+($debian_chroot)}$HN\e[0;36m\033[01;32m\w >\e[m"
 else
-    PS1='\w >'
+    PS1="${debian_chroot:+($debian_chroot)}$HN\w >"
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 
