@@ -91,3 +91,7 @@ set clipboard=unnamedplus
 
 " Allow scrolling with mousewheel
 set mouse=a
+
+" Nerdcommenter options
+let NERDSpaceDelims=1   " spaces around delimeters
+let g:NERDAltDelims_c=1 " use // instead of /* */ for C comments

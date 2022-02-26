@@ -63,11 +63,12 @@ fi
 if [ "$HOSTNAME" = 'DESKTOP-DG4RQIH' ]; then
     HN=""
 else
-    HN="\e[0;31m\u@\h: \e[m"
+    HN="\[\e[0;31m\u@\h: \e[m\]"
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}$HN\e[0;36m\033[01;32m\w \$ \e[m"
+    #PS1="${debian_chroot:+($debian_chroot)}$HN\[\e[0;36m\033]\]\w \$ "
+     PS1="${debian_chroot:+($debian_chroot)}$HN\[\e[0;36m\]\w \$ \[\e[0m\]"
 else
     PS1="${debian_chroot:+($debian_chroot)}$HN\w \$ "
 fi
