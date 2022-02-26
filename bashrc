@@ -11,16 +11,6 @@ esac
 export FZF_DEFAULT_COMMAND="fdfind"
 export FZF_CTRL_T_COMMAND="fdfind"
 
-# custom alias to get to my personal notes directory
-alias notes="cd /mnt/c/Users/blair/'My Drive'/Notes"
-alias docs="cd /mnt/c/Users/blair"
-
-# alias for xclip to go direct to clipboard
-alias xclips="xclip -selection clipboard"
- 
-# alias for python
-alias python="python3"
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -70,7 +60,6 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # only display the hostname if away from my regular machine, or on ssh
-echo "Hostname is $HOSTNAME"
 if [ "$HOSTNAME" = 'DESKTOP-DG4RQIH' ]; then
     HN=""
 else
@@ -78,15 +67,9 @@ else
 fi
 
 if [ "$color_prompt" = yes ]; then
-    # old versions below
-    # original
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # modified (no computer name)
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]> '
-    PS1="${debian_chroot:+($debian_chroot)}$HN\e[0;36m\033[01;32m\w >\e[m"
+    PS1="${debian_chroot:+($debian_chroot)}$HN\e[0;36m\033[01;32m\w \$ \e[m"
 else
-    PS1="${debian_chroot:+($debian_chroot)}$HN\w >"
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="${debian_chroot:+($debian_chroot)}$HN\w \$ "
 fi
 
 unset color_prompt force_color_prompt
@@ -113,7 +96,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -149,5 +132,3 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-

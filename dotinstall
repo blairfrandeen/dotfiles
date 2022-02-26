@@ -5,18 +5,30 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Copying Blair's dotfiles from $BASEDIR..."
 
+# TODO: Add conditional statements to add to existing dotfiles
+# rather than use ln -sf to force override. May break things
+# on some systems.
+#
+# Good practice will be to have simple "top level" dotfiles,
+# and store more detailed options in secondary files, such
+# as ~/.bash_aliases
+
 # vim
-ln -sf ${BASEDIR}/vimrc ~/.vimrc
-ln -sf ${BASEDIR}/vim ~/.vim
+ln -s ${BASEDIR}/vimrc ~/.vimrc
+ln -s ${BASEDIR}/vim ~/.vim
 
 # bash
-ln -sf ${BASEDIR}/bashrc ~/.bashrc
-ln -sf ${BASEDIR}/inputrc ~/.inputrc
+ln -s ${BASEDIR}/bashrc ~/.bashrc
+ln -s ${BASEDIR}/bash_aliases ~/.bash_aliases
+ln -s ${BASEDIR}/inputrc ~/.inputrc
 
 #git
-ln -sf ${BASEDIR}/gitconfig ~/.gitconfig
+ln -s ${BASEDIR}/gitconfig ~/.gitconfig
 
 # Download submodules
 echo "Getting submodules..."
 cd $BASEDIR
 git submodule update --init --remote
+
+# TODO: Consider installing additional packages such as fzf 
+# to remote machines
