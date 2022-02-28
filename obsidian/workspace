@@ -1,0 +1,125 @@
+{
+  "main": {
+    "id": "fed177a7cd763779",
+    "type": "split",
+    "children": [
+      {
+        "id": "961c6ac78e338397",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Code Thoughts.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80ccd1d44f01157f",
+    "type": "split",
+    "children": [
+      {
+        "id": "802d73d7deae79b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b220b6b5daf082c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "0521a11b27de6db6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "mermaid",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c4d0c3d11f10d308",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 348.0036334991455,
+    "collapsed": true
+  },
+  "right": {
+    "id": "b8c8827c4281b3ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab6df13d44156e0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3558b8d2f5bb9fc9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Code Thoughts.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7183d4803c7a034f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "961c6ac78e338397",
+  "lastOpenFiles": [
+    "Code Thoughts.md",
+    "Shared/Deep Work Checklist.md",
+    "Gifts for Julia.md",
+    "Whisky Thoughts.md",
+    "Preconditions for Agile.md",
+    "Shared/DATUM Dev Log.md",
+    "Interview Questions to Ask.md",
+    "Relativity Space Final Interview.md",
+    "Ryan Quinn.md",
+    "James Zandstra.md"
+  ]
+}

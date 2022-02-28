@@ -1,0 +1,9 @@
+{
+  "theme": "obsidian",
+  "translucency": false,
+  "baseFontSize": 16,
+  "cssTheme": "Subtlegold",
+  "enabledCssSnippets": [
+    "obsidian"
+  ]
+}
