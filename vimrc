@@ -63,8 +63,6 @@ autocmd vimenter * ++nested colorscheme gruvbox
 
 autocmd BufNewFile,BufRead * setlocal formatoptions=tcq
 
-" Autoindent, tabs as four spaces
-set ai ts=4 sw=4 sts=4 et
 
 " Remember folds
 augroup remember_folds
@@ -95,3 +93,6 @@ set mouse=a
 " Nerdcommenter options
 let NERDSpaceDelims=1   " spaces around delimeters
 let g:NERDAltDelims_c=1 " use // instead of /* */ for C comments
+
+" Autoindent, tabs as four spaces
+set ai ts=4 sw=4 sts=4 et
