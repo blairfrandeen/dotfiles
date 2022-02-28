@@ -17,8 +17,10 @@ Installation instructions:
 - Obsidian `obsidian.css` - manually copied to `.obsidian` folder in vault
 
 ## Copying files to Windows:
-
+Make sure to specify the correct paths:
 ```Shell
 git clone https://github.com/blairfrandeen/dotfiles
-xcopy /s /i obsidian "\Users\blair\My Drive\Notes\.obsidian"
+mklink /J "C:\Users\blair\My Drive\Notes\.obsidian" "C:\Users\blair\dotfiles\
+obsidian"
+mklink /J "C:\Users\blair\AppData\Roaming\espanso" "C:\Users\blair\dotfiles\espanso"
 ```
