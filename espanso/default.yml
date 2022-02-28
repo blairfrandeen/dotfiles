@@ -1,0 +1,107 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Package that I have installed:
+# - all-emojis 0.1.0
+# - greek-letters-alt - 0.1.0
+# - math - 0.1.0
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  - trigger: ":#"
+    replace: "**Tags:**"
+
+  - trigger: ":deg"
+    replace: "°"
+
+  - trigger: ":wx"
+    replace: "https://jpl.webex.com/meet/frandeen"
+
+  - trigger: ":pm" # Plus Minus
+    replace: "±"
+
+  - trigger: ":dia" # Diameter
+    replace: "Ø"
+
+  - trigger: ":a/e" # Alpha/ Epsilon
+    replace: "α/ε"
+
+  - trigger: ':lol' # overrides :tears or something
+    replace: "\U0001F602"
+
+  - trigger: ":pos" # true position
+    replace: "⌖"
+
+  - trigger: ":inf" #infinity
+    replace: "\U0000221E"
+
+  # Super hacky way to clear checkboxes in Obsidian
+  - trigger: ":cc"
+    replace: ":%s/\\[x\\]/[ ]/g"
+
+  # Drawing Check Date. Start w/ drawing # & rev, e.g. 20033800_A
+  - trigger: ":cd"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "_CHK_BSF_%Y%m%d"
+  # Today
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+ # yesterday
+  - trigger: ":d-1"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: -86400
+
+  # tomorrow
+  - trigger: ":d+1"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: 86400
+
+  # Breadcrumb
+  - trigger: ":bc"
+    word: true
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: (echo "[[$((Get-Date).AddDays(-1) | Get-Date -UFormat "%Y-%m-%d")|<< Yesterday]] | [[$((Get-Date).AddDays(+1) | Get-Date -UFormat "%Y-%m-%d")|Tomorrow >>]]")
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+
+toggle_key: ALT
+show_notifications: true
