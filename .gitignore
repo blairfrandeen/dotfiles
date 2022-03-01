@@ -1,3 +1,11 @@
 vim/view
 vim/.netrwhist
 *.swp
+obsidian/cache
+obsidian/daily-notes.json
+obsidian/graph.json
+obsidian/templates.json
+obsidian/workspace
+obsidian/zk-prefixer.json
+obsidian/community-plugins.json
+obsidian/plugins
