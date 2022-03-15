@@ -12,7 +12,7 @@
     border: .5px solid var(--code-border-color);
     border-radius: 3px;
     padding: .1rem .15rem;
-    font-size: .8rem;
+    font-size: 1rem;
     vertical-align: baseline;
 }
 
