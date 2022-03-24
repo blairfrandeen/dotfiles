@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "961c6ac78e338397",
+        "id": "cacc0dcbc59b100e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Code Thoughts.md",
+            "file": "Coffee thoughts backup.md",
             "mode": "source",
             "source": false
           }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Code Thoughts.md",
+                "file": "Coffee thoughts backup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,17 +109,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "961c6ac78e338397",
+  "active": "cacc0dcbc59b100e",
   "lastOpenFiles": [
-    "Code Thoughts.md",
-    "Shared/Deep Work Checklist.md",
-    "Gifts for Julia.md",
-    "Whisky Thoughts.md",
-    "Preconditions for Agile.md",
+    "Coffee thoughts backup.md",
     "Shared/DATUM Dev Log.md",
-    "Interview Questions to Ask.md",
-    "Relativity Space Final Interview.md",
-    "Ryan Quinn.md",
-    "James Zandstra.md"
+    "Margarita Marinova.md",
+    "Christina Huang.md",
+    "Shared/Career lessons.md",
+    "Amazon Interview Prep.md",
+    "Amazon Leadership Principles.md",
+    "2021-22 Career Exploration.md",
+    "Mike Dergance.md",
+    "Code Thoughts.md"
   ]
 }
