@@ -13,3 +13,4 @@ alias xclips="xclip -selection clipboard"
  
 # alias for python
 alias python="python3"
+alias ipython="ipython3"

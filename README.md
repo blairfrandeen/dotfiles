@@ -1,9 +1,8 @@
 # Blair's dotfiles
-
 Installation instructions:
 1. Cone this repo
-2. Run `./dotinstall`
-3. Hope for the best
+2. Run `./dotinstall` (linux only) - note that this may run into problems if any of the files listed below already exist.
+3. Make junctions for obsidian and espanso (windows)
 
 ## Files covered by `dotinstall` script (linux only)
 - `.vimrc`
@@ -13,12 +12,10 @@ Installation instructions:
 - `.gitconfig`
 
 ## Files not covered by install script (windows)
-- Espanso `default.yml` - needs to be manually copied or linked to espanso directory
-- Obsidian `obsidian.css` - manually copied to `.obsidian` folder in vault
-
-## Copying files to Windows:
-
+Make sure to specify the correct paths:
 ```Shell
 git clone https://github.com/blairfrandeen/dotfiles
-xcopy /s /i obsidian "\Users\blair\My Drive\Notes\.obsidian"
+mklink /J "C:\Users\blair\My Drive\Notes\.obsidian" "C:\Users\blair\dotfiles\
+obsidian"
+mklink /J "C:\Users\blair\AppData\Roaming\espanso" "C:\Users\blair\dotfiles\espanso"
 ```
