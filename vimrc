@@ -82,6 +82,10 @@ command CR w | !gcc -Wall -g % && ./a.out
 " Run Python Files
 command P w | !python3 %
 
+" Run pytest
+command PT w | !pytest
+command Pt w | !pytest
+
 " Clipboard
 " If not working, try the following command in terminal:
 " sudo apt install vim-gtk3
