@@ -12,5 +12,5 @@ alias docs="cd /mnt/c/Users/blair"
 alias xclips="xclip -selection clipboard"
  
 # alias for python
-alias python="python3"
+alias python="python3.10"
 alias ipython="ipython3"

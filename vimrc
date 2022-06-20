@@ -74,6 +74,13 @@ augroup END
 " Code folding
 set foldmethod=syntax
 
+" Python Specific settings
+au BufRead,BufNewFile *.py set foldmethod=indent
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
 " Compile & run C files
 command C w | !gcc -Wall -g %
 command R !./a.out
@@ -81,6 +88,10 @@ command CR w | !gcc -Wall -g % && ./a.out
 
 " Run Python Files
 command P w | !python3 %
+
+" Run pytest
+command PT w | !pytest
+command Pt w | !pytest
 
 " Clipboard
 " If not working, try the following command in terminal:
