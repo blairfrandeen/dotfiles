@@ -14,3 +14,12 @@ alias xclips="xclip -selection clipboard"
 # alias for python
 alias python="python3.10"
 alias ipython="ipython3"
+
+# android debugger
+alias adb="/mnt/c/platform-tools/adb.exe"
+
+# quickly activate venv
+alias actenv="source venv/bin/activate"
+
+# automatically use gitignore with tree
+alias tree="tree --gitignore"
