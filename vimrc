@@ -1,5 +1,4 @@
 " Remap the escape key on the keyboard or through the OS ;)
-
 " Leader key
 let mapleader = ","
 
