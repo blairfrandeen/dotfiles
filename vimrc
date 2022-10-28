@@ -27,6 +27,9 @@ nnoremap <leader>ws :set listchars=space:_,tab:>~ list<cr>
 " Get rid of 'Q' functionality
 nmap Q <Nop>
 
+" Use tab to switch to matching bracket
+nnoremap <tab> %
+vnoremap <tab> %
 
 " Editor Options
 "===================
@@ -36,6 +39,9 @@ set relativenumber
 
 " Highlight current line
 set cursorline
+
+" Set line length marker
+set colorcolumn=100
 
 " Start showing search as soon as you start typing
 set incsearch
@@ -113,6 +119,15 @@ command P w | !python3 %
 " Run pytest
 command PT w | !pytest
 command Pt w | !pytest
+
+" Add macrcos for debugging with f-strings
+" small word
+nnoremap <leader>p yiwoprint(f"{<esc>pa=}")<esc>
+" big Word
+nnoremap <leader>P yiWoprint(f"{<esc>pa=}")<esc>
+" selection
+vnoremap <leader>p yoprint(f"{<esc>pa=}")<esc>
+" RESULT: print(f"{nnoremap=}")
 
 let g:python_highlight_all = 1
 
