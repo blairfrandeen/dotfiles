@@ -123,6 +123,10 @@ command C w | !gcc -Wall -g %
 command R !./a.out
 command CR w | !gcc -Wall -g % && ./a.out
 
+" Rust
+" ------------------
+" Run rust program
+command U w | !cargo run
 
 " Enable color scheme
 set t_Co=256
