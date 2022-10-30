@@ -80,6 +80,11 @@ set mouse=a
 " Autoindent, tabs as four spaces
 set ai ts=4 sw=4 sts=4 et
 
+" Fix indentation for lines starting with #
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
+
 autocmd BufNewFile,BufRead * setlocal formatoptions=tcq
 
 
