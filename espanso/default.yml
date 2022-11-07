@@ -78,6 +78,15 @@ matches:
           format: "%Y-%m-%d"
           offset: -86400
 
+  # timestamp
+  - trigger: ":ts"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
   # tomorrow
   - trigger: ":d+1"
     replace: "{{mydate}}"
