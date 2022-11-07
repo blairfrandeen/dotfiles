@@ -67,12 +67,14 @@ autocmd BufNewFile,BufRead * setlocal formatoptions=tcq
 " Remember folds
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+  " autocmd BufWinLeave * mkview
+  " autocmd BufWinEnter * silent! loadview
 augroup END
 
 " Code folding
 set foldmethod=syntax
+
+syntax on
 
 " Compile & run C files
 command C w | !gcc -Wall -g %
