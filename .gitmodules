@@ -4,9 +4,6 @@
 [submodule "vim/pack/vendor/start/python-syntax"]
 	path = vim/pack/vendor/start/python-syntax
 	url = https://github.com/vim-python/python-syntax
-[submodule "vim/pack/vendor/opt/carbonized"]
-	path = vim/pack/vendor/opt/carbonized
-	url = https://github.com/haystackandroid/carbonized
 [submodule "vim/pack/vendor/opt/papercolor-theme"]
 	path = vim/pack/vendor/opt/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
