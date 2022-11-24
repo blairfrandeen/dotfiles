@@ -3,6 +3,7 @@
 	--font-monospace: 'Fira Code', monospace;
     --code-bg-color: #1a1a1a;
     --code-border-color: #aba6a6;
+    --text-on-accent: #161616 /* fix for subtlegold */
 }
 
 /* Inline code color */
