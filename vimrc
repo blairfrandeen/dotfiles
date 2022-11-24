@@ -91,7 +91,7 @@ set scrolloff=0
 
 " Command completion
 set wildmenu
-set wildmenu=list:longest
+set wildmode=list:longest
 
 
 " Plugin Settings
