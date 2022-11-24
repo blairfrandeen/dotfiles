@@ -2,6 +2,7 @@ vim/view
 vim/black
 vim/.netrwhist
 *.swp
+*.un~
 obsidian/cache
 obsidian/daily-notes.json
 obsidian/graph.json
