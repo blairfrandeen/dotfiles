@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "fed177a7cd763779",
+    "type": "split",
+    "children": [
+      {
+        "id": "de432d37161a1471",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a75b0142a0dd909",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Why You Should Always Change Your Source File Names When Restructuing a Package.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1c52b980cf807020",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Coding Resume.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ddc2dedc166e5666",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Code Thoughts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "781fb983b0c01abb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Finance.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "74bb97e9dce08dc5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Money Thoughts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "12cfd40d419c7fd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Shared/Recurse Research.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80ccd1d44f01157f",
+    "type": "split",
+    "children": [
+      {
+        "id": "802d73d7deae79b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b220b6b5daf082c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "0521a11b27de6db6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c4d0c3d11f10d308",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 503.00418853759766
+  },
+  "right": {
+    "id": "b8c8827c4281b3ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab6df13d44156e0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3558b8d2f5bb9fc9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Code Thoughts.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7183d4803c7a034f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ddc2dedc166e5666",
+  "lastOpenFiles": [
+    "Shared/Recurse Research.md",
+    "2022-11-23 Maryanne Wachter.md",
+    "Code Thoughts.md",
+    "Shared/Application to Recurse Center.md",
+    "Coding Resume.md",
+    "Money Thoughts.md",
+    "Finance.md",
+    "Why You Should Always Change Your Source File Names When Restructuing a Package.md",
+    "The Good Life.md",
+    "marijuana thoughts.md"
+  ]
+}
