@@ -4,9 +4,6 @@
 [submodule "vim/pack/vendor/start/python-syntax"]
 	path = vim/pack/vendor/start/python-syntax
 	url = https://github.com/vim-python/python-syntax
-[submodule "vim/pack/vendor/opt/papercolor-theme"]
-	path = vim/pack/vendor/opt/papercolor-theme
-	url = https://github.com/NLKNguyen/papercolor-theme
 [submodule "vim/pack/vendor/start/gruvbox"]
 	path = vim/pack/vendor/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
@@ -19,3 +16,6 @@
 [submodule "vim/pack/vendor/start/vim-easymotion"]
 	path = vim/pack/vendor/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
+[submodule "vim/pack/vendor/start/rust.vim"]
+	path = vim/pack/vendor/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
