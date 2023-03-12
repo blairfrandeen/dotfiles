@@ -25,6 +25,12 @@ ln -s ${BASEDIR}/inputrc ~/.inputrc
 #git
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
 
+# terminator
+ln -s ${BASEDIR}/terminator ~/.config/terminator/config
+
+#i3
+ln -s /home/blair/dotfiles/i3 ~/.config/i3
+
 # Download submodules
 echo "Getting submodules..."
 cd $BASEDIR

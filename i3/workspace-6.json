@@ -1,0 +1,50 @@
+// vim:ts=4:sw=4:et
+{
+    "layout": "splith",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1163,
+               "width": 960,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Calendar - Mozilla Thunderbird",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^thunderbird$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Spotify",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^X\\-terminal\\-emulator$",
+               "title": "^spt$"
+               }
+            ],
+            "type": "con"
+        }
+        ]
+}
+

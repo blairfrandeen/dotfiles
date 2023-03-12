@@ -4,8 +4,8 @@
 let mapleader = ","
 
 " Move lines up or down
-nnoremap <c-j> ddjP
 nnoremap <c-k> ddkP
+nnoremap <c-j> ddjP
 inoremap <c-j> <esc>ddjPi
 inoremap <c-k> <esc>ddkPi
 
@@ -87,7 +87,7 @@ autocmd BufNewFile,BufRead * setlocal formatoptions=tcq
 set nocompatible
 
 " Keep the cursor off the bottom & top of the screen
-set scrolloff=0
+set scrolloff=5
 
 " Command completion
 set wildmenu
