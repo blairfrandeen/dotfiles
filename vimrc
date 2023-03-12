@@ -106,6 +106,7 @@ map <Leader>k <Plug>(easymotion-k)
 " Nerdcommenter
 let NERDSpaceDelims=1   " spaces around delimeters
 let g:NERDAltDelims_c=1 " use // instead of /* */ for C comments
+map gcc <plug>NERDCommenterToggle
 
 " File Specific Settings
 "===================
