@@ -16,7 +16,7 @@ alias python="python3.10"
 alias ipython="ipython3"
 
 # android debugger
-alias adb="/mnt/c/platform-tools/adb.exe"
+# alias adb="/mnt/c/platform-tools/adb.exe"
 
 # quickly activate venv
 alias actenv="source venv/bin/activate"

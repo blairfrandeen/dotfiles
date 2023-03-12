@@ -112,5 +112,6 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Use bash aliases
 source ~/.bash_aliases
+source ~/.bash_profile
 
 unset LESS;
