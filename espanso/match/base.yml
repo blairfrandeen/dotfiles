@@ -37,6 +37,10 @@ matches:
   - trigger: ':lol' # overrides :tears or something
     replace: "\U0001F602"
 
+  # Email symbol, used in task tracking
+  - trigger: ':@'
+    replace: "\U0001F4E9"
+
   - trigger: ":pos" # true position
     replace: "⌖"
 
@@ -74,11 +78,35 @@ matches:
           format: "%Y-%m-%d"
           offset: -86400
 
+  # timestamp
+  - trigger: ":ts"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
   # tomorrow
   - trigger: ":d+1"
     replace: "{{mydate}}"
     vars:
       - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: 86400
+
+  # Linux breadcrumb
+  - trigger: ":yt"
+    replace: "[[{{yesterday}}|<< Yesterday]] | [[{{tomorrow}} | Tomorrow >>]]"
+    vars:
+      - name: yesterday
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: -86400
+      - name: tomorrow
         type: date
         params:
           format: "%Y-%m-%d"

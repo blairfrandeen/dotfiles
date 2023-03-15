@@ -29,7 +29,10 @@ ln -s ${BASEDIR}/gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/terminator ~/.config/terminator/config
 
 #i3
-ln -s /home/blair/dotfiles/i3 ~/.config/i3
+ln -s ${BASEDIR}/dotfiles/i3 ~/.config/i3
+
+# espanso
+ln -s ${BASEDIR}/espanso ~/.config/espanso
 
 # Download submodules
 echo "Getting submodules..."
