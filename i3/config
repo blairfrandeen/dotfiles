@@ -16,10 +16,10 @@ exec_always --no-startup-id xrandr --output HDMI-2 --auto --left-of eDP-1
 exec_always --no-startup-id xrandr --output eDP-1 --auto
 
 # Remap caps lock to esc
-exec --no-startup-id setxkbmap -layout us -option caps:escape
+exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 
 # Set tap to click
-exec --no-startup-id xinput set-prop 17 335 1
+exec --no-startup-id xinput set-prop "DELL097D:00 04F3:311C Touchpad" 335 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -210,6 +210,12 @@ bar {
 
 bindsym $mod+p move workspace to output left
 bindsym $mod+n move workspace to output right
+
+# Tame zoom idiocy
+for_window [title="^Zoom Cloud Meetings$"] move to workspace number $ws10
+# for_window [title="^Zoom$"] move to workspace number $ws10
+for_window [title="^Zoom Meeting$"] floating enable
+for_window [title="^Meeting Chat$"] floating enable
 
 
 # Restore layouts
