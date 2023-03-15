@@ -21,6 +21,8 @@ ln -s ${BASEDIR}/vim ~/.vim
 ln -s ${BASEDIR}/bashrc ~/.bashrc
 ln -s ${BASEDIR}/bash_aliases ~/.bash_aliases
 ln -s ${BASEDIR}/inputrc ~/.inputrc
+ln -s ${BASEDIR}/zshrc ~/.zshrc
+ln -s ${BASEDIR}/bash_profile ~/.bash-profile
 
 #git
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
