@@ -26,6 +26,7 @@ ln -s ${BASEDIR}/inputrc ~/.inputrc
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
 
 # terminator
+mkdir ~/.config/terminator
 ln -s ${BASEDIR}/terminator ~/.config/terminator/config
 
 #i3
