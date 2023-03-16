@@ -30,6 +30,9 @@ install i3
 install ffmpeg
 install lame
 
+# Make vim the default editor
+sudo update-alternatives --set editor /usr/bin/vim.basic
+
 # Python
 install python3-pip
 pip install black --exists-action a -q
