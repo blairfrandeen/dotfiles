@@ -15,6 +15,7 @@ function install {
 
 # Basics
 install vim
+install vim-gtk3
 install screen
 install fzf
 install tree
@@ -22,6 +23,10 @@ install git
 install curl
 install gcc
 install tmux
+install linux-tools-common
+install linux-tools-generic
+install linux-tools-`uname -r`
+install pandoc
 
 # Window manager
 install i3
@@ -34,9 +39,10 @@ install lame
 sudo update-alternatives --set editor /usr/bin/vim.basic
 
 # Python
-install python3-pip
-pip install black --exists-action a -q
 install ipython3
+install python3-pip
+install python3.10-venv
+pip install black --exists-action a -q
 
 # Rust
 which cargo &> /dev/null
