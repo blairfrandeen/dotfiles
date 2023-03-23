@@ -11,19 +11,15 @@
 
 set $mod Mod4
 
+# Machine-specific settings
+include ~/dotfiles/i3/machine.conf
+
 # Restore multiple monitors
-# For octobook
-exec_always --no-startup-id xrandr --output HDMI-2 --auto --left-of eDP-1
-# For dell
-# TODO: Pick one or the other depending on which computer I'm using
-exec_always --no-startup-id xrandr --output DP-3 --auto --left-of eDP-1
 exec_always --no-startup-id xrandr --output eDP-1 --auto
 
 # Remap caps lock to esc
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 
-# Set tap to click
-exec --no-startup-id xinput set-prop "DELL097D:00 04F3:311C Touchpad" 335 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -57,6 +53,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# TODO: Make these work for all media players
 bindsym XF86AudioPlay exec spt pb -t
 bindsym XF86AudioNext exec spt pb -n
 bindsym XF86AudioPrev exec spt pb -p
