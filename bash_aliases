@@ -26,3 +26,7 @@ alias tree="tree --gitignore"
 
 # Use neovim
 alias vim="nvim"
+
+# The oxidation staarts here
+alias cat="bat"
+alias grep="ripgrep"
