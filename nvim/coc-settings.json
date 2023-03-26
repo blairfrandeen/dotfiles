@@ -2,6 +2,8 @@
 	"diagnostic.virtualText": true,
 	"diagnostic.virtualTextCurrentLineOnly": false,
 	"suggest.noselect": true,
-	"coc.preferences.enableMarkdown": false
+	"coc.preferences.enableMarkdown": false,
+	"inlayHint.display": true
 }
+
 

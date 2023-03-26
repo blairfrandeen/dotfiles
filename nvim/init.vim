@@ -46,10 +46,16 @@ Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'rust-lang/rust.vim'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
-" Plugin Setting
+" Theme
+" ================
+set termguicolors
+colorscheme base16-gigavolt
+
+" Plugin-specific Settings
 " ================
 " coc.nvim
 set signcolumn=no
@@ -143,6 +149,7 @@ function! s:md_settings()
 	set nocursorline
 	set lbr
 	execute "silent! CocDisable"
+	colorscheme base16-atelier-forest
 endfunction
 
 autocmd BufNew,BufEnter *.md call s:md_settings()
