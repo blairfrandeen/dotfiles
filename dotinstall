@@ -16,6 +16,7 @@ echo "Copying Blair's dotfiles from $BASEDIR..."
 # vim
 ln -s ${BASEDIR}/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim ~/.vim
+ln -s ${BASEDIR}/nvim ~/.config/nvim
 
 # bash
 ln -s ${BASEDIR}/bashrc ~/.bashrc

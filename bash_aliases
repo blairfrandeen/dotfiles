@@ -23,3 +23,6 @@ alias actenv="source venv/bin/activate"
 
 # automatically use gitignore with tree
 alias tree="tree --gitignore"
+
+# Use neovim
+alias vim="nvim"
