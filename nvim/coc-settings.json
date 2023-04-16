@@ -7,7 +7,7 @@
 	"rust-analyzer.numThreads": 2,
 	"diagnostic.checkCurrentLine": true,
 	"python.formatting.provider": "black",
-	"python.formatting.blackPath": "black"
+	"python.formatting.blackPath": "/home/blair/.local/bin/black",
+	"coc.preferences.formatOnSave": true,
+	"python.linting.mypyEnabled": true,
 }
-
-
