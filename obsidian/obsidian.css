@@ -1,0 +1,103 @@
+/* Some variables */
+:root {
+	--font-monospace: 'Fira Code', monospace;
+    --code-bg-color: #1a1a1a;
+    --text-on-accent: #191a1b;
+    --code-border-color: #aba6a6;
+}
+
+.search-result-file-matches {
+    --font-ui-smaller: 1.1em;
+    --font-ui-small: 1.3em;
+}
+
+.tree-item-self {
+    --font-size: 1.2em;
+}
+body {
+    --code-normal: #a5ccf3;
+    --code-comment: #bfbfbf;
+}
+
+.theme-dark {
+    --text-on-accent: #161616 /* fix for subtlegold */
+}
+
+.cm-s-obsidian span.cm-comment {
+    color: #bfbfbf;
+}
+
+/* Inline code color */
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    color: #ded242;
+    background-color: var(--code-bg-color);
+    border: .5px solid var(--code-border-color);
+    border-radius: 3px;
+    padding: .1rem .15rem;
+    font-size: 1.2rem;
+    vertical-align: baseline;
+}
+
+/* Code block formatting */
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+    color: #a5ccf3;
+    background-color: var(--code-bg-color);
+    border-left: .5px solid var(--code-border-color);
+    border-right: .5px solid var(--code-border-color);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+    background-color: var(--code-block-background);
+    border-bottom:.5px solid var(--code-border-color);
+    border-radius: -5px;
+    padding: .1rem .15rem;
+    border-left: none;
+    border-right: none;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    background-color: var(--code-block-background);
+    border-top: .5px solid var(--code-border-color);
+    border-radius: -5px;
+    padding: .1rem .15rem;
+    border-left: none;
+    border-right: none;
+}
+
+
+/* Slightly smaller header sizes */
+.cm-header-1 {
+    font-size: 1.8em;
+}
+.cm-header-2 {
+    font-size: 1.6em;
+}
+.cm-header-3 {
+    font-size: 1.4em;
+}
+.cm-header-4 {
+    font-size: 1.2em;
+}
+.cm-header-5 {
+    font-size: 1.0em;
+}
+
+/* Different color for equations */
+mjx-math {
+    display: inline-block;
+    background-color: var(--code-bg-color);
+    text-align: left;
+    line-height: 0;
+    text-indent: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    font-size-adjust: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    word-spacing: normal;
+    white-space: nowrap;
+    direction: ltr;
+    padding: 1px 0;
+    color: #ffffff;
+}
