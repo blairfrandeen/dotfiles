@@ -15,7 +15,7 @@ set $mod Mod4
 include ~/dotfiles/i3/machine.conf
 
 # Restore multiple monitors
-exec_always --no-startup-id xrandr --output eDP-1 --auto
+# exec_always --no-startup-id xrandr --output eDP-1 --auto
 
 # Remap caps lock to esc
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape
@@ -214,10 +214,10 @@ bindsym $mod+p move workspace to output left
 bindsym $mod+n move workspace to output right
 
 # Tame zoom idiocy
-for_window [title="^Zoom Cloud Meetings$"] move to workspace number $ws10
+# for_window [title="^Zoom Cloud Meetings$"] move to workspace number $ws10
 # for_window [title="^Zoom$"] move to workspace number $ws10
-for_window [title="^Zoom Meeting$"] floating enable
-for_window [title="^Meeting Chat$"] floating enable
+# for_window [title="^Zoom Meeting$"] floating enable
+# for_window [title="^Meeting Chat$"] floating enable
 
 
 # Restore layouts
@@ -233,17 +233,18 @@ exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/blair/.config/i3/
 exec obsidian
 exec --no-startup-id "i3-msg 'workspace 3;move workspace to output eDP-1'"
 
-exec --no-startup-id "i3-msg 'workspace 4; append_layout /home/blair/.config/i3/workspace-4.json'"
-exec code
-exec i3-sensible-terminal
-exec --no-startup-id "i3-msg 'workspace 4; move workspace to output DP-3'"
+# exec --no-startup-id "i3-msg 'workspace 4; append_layout /home/blair/.config/i3/workspace-4.json'"
+# exec code
+# exec i3-sensible-terminal
+# exec --no-startup-id "i3-msg 'workspace 4; move workspace to output DP-3'"
 
 exec --no-startup-id "i3-msg 'workspace 5; append_layout /home/blair/.config/i3/workspace-5.json'"
 exec zulip
-exec firefox https://www.recurse.com/calendar/ https://recurse.rctogether.com/ https://devdocs.io
+exec firefox 
+# https://www.recurse.com/calendar/ https://recurse.rctogether.com/ https://devdocs.io
 exec --no-startup-id "i3-msg 'workspace 5; move workspace to output DP-3'"
 
-exec --no-startup-id "i3-msg 'workspace 6; append_layout /home/blair/.config/i3/workspace-6.json'"
-exec thunderbird
-exec i3-sensible-terminal --title="spt" -e "spotifyd && spt"
-exec --no-startup-id "i3-msg 'workspace 6; move workspace to output eDP-1'"
+# exec --no-startup-id "i3-msg 'workspace 6; append_layout /home/blair/.config/i3/workspace-6.json'"
+# exec thunderbird
+# exec i3-sensible-terminal --title="spt" -e "spotifyd && spt"
+# exec --no-startup-id "i3-msg 'workspace 6; move workspace to output eDP-1'"
