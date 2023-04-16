@@ -29,4 +29,4 @@ alias vim="nvim"
 
 # The oxidation staarts here
 alias cat="bat"
-alias grep="ripgrep"
+alias grep="rg"
