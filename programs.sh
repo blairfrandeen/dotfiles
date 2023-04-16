@@ -5,7 +5,7 @@ sudo apt update
 function install {
     which $1 &> /dev/null
 
-    if [ $? -ne 0 ]; then
+   if [ $? -ne 0 ]; then
         echo "Installing: ${1}..."
         sudo apt install -y $1
     else
@@ -15,18 +15,25 @@ function install {
 
 # Basics
 install vim
+install neovim
 install vim-gtk3
 install screen
 install fzf
 install tree
 install git
 install curl
-install gcc
 install tmux
+install maim
+install pandoc
+
+# Developer stuff
+install gcc
 install linux-tools-common
 install linux-tools-generic
 install linux-tools-`uname -r`
-install pandoc
+install pkg-config
+install libssl-dev
+install sqlite
 
 # Window manager
 install i3
@@ -34,9 +41,10 @@ install i3
 # Media processing
 install ffmpeg
 install lame
+install imagemagick
 
-# Make vim the default editor
-sudo update-alternatives --set editor /usr/bin/vim.basic
+# Make neovim the default editor
+sudo update-alternatives --set editor /usr/bin/nvim
 
 # Python
 install ipython3
