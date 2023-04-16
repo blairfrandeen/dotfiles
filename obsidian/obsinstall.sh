@@ -6,7 +6,6 @@
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Updating notes in $1"
-touch "$1/hello.txt"
 ln -sf ${BASEDIR}/obsidian.vimrc ${1}/.obsidian/obsidian.vimrc
 ln -sf ${BASEDIR}/app.json ${1}/.obsidian/app.json
 ln -sf ${BASEDIR}/appearance.json ${1}/.obsidian/appearance.json
