@@ -3,7 +3,11 @@
 	"diagnostic.virtualTextCurrentLineOnly": false,
 	"suggest.noselect": true,
 	"coc.preferences.enableMarkdown": false,
-	"inlayHint.display": true
+	"inlayHint.display": true,
+	"rust-analyzer.numThreads": 2,
+	"diagnostic.checkCurrentLine": true,
+	"python.formatting.provider": "black",
+	"python.formatting.blackPath": "black"
 }
 
 
