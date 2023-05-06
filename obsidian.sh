@@ -5,6 +5,11 @@
 # establish the base directory that I'm working out of
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+echo "Cleaning old .obsidian directory"
+rm -rf ${1}/.obsidian
+mkdir ${1}/.obsidian
+mkdir ${1}/.obsidian/snippets
+
 echo "Updating notes in $1"
 ln -sf ${BASEDIR}/obsidian.vimrc ${1}/.obsidian/obsidian.vimrc
 ln -sf ${BASEDIR}/app.json ${1}/.obsidian/app.json
