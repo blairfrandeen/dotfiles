@@ -33,9 +33,9 @@ mkdir ~/.config/terminator
 ln -s ${BASEDIR}/terminator ~/.config/terminator/config
 
 #i3
-ln -s ${BASEDIR}/dotfiles/i3 ~/.config/i3
+ln -s ${BASEDIR}/i3 ~/.config/i3
 # i3 machine-specific configuration
-ln -s ${BASEDIR}/dotfiles/i3/$HOST.conf ~/.config/i3/machine.conf
+ln -s ${BASEDIR}/i3/$HOST.conf ~/.config/i3/machine.conf
 
 # espanso
 ln -s ${BASEDIR}/espanso ~/.config/espanso
