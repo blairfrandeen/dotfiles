@@ -61,6 +61,13 @@ install imagemagick
 # Make neovim the default editor
 sudo update-alternatives --set editor /usr/bin/nvim
 
+# Node.js for nvim/coc
+curl -sL install-node.vercel.app/lts | sudo bash
+# Install plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# Install vim plugins
+vim -c 'PlugInstall' -c 'qa!'
+
 # Python
 install ipython3
 install python3-pip
@@ -103,3 +110,13 @@ if [ $? -ne 0 ]; then
 else
     echo "GitHub CLI is already installed"
 fi
+
+# Espanso
+wget https://github.com/federico-terzi/espanso/releases/download/v2.1.8/espanso-debian-x11-amd64.deb
+install ./espanso-debian-x11-amd64.deb
+espanso service register
+espanso start
+
+# Obsidian
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.2.7/obsidian_1.2.7_amd64.deb
+install ./obsidian_1.2.7_amd64.deb
