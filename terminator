@@ -2,6 +2,7 @@
   geometry_hinting = True
   title_transmit_fg_color = "#241f31"
   title_transmit_bg_color = "#e5a50a"
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   always_split_with_profile = True
   title_use_system_font = False
   title_font = Fira Code weight=453 12
@@ -41,6 +42,32 @@
     use_custom_command = True
     custom_command = zsh
     bold_is_bright = True
+  [[Kibble]]
+    background_color = "#0e100a"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#9fda9c"
+    cursor_color_fg = False
+    foreground_color = "#f7f7f7"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#4d4d4d:#c70031:#29cf13:#d8e30e:#3449d1:#8400ff:#0798ab:#e2d1e3:#5a5a5a:#f01578:#6ce05c:#f3f79e:#97a4f7:#c495f0:#68f2e0:#ffffff"
+    use_custom_command = True
+    custom_command = zsh
+    bold_is_bright = True
+  [[Night Owl]]
+    background_color = "#0e1019"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#ff0018"
+    cursor_color_fg = False
+    foreground_color = "#fffaf4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
+    use_custom_command = True
+    custom_command = zsh
+    bold_is_bright = True
 [layouts]
   [[default]]
     [[[window0]]]
@@ -49,4 +76,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = Night Owl
 [plugins]
