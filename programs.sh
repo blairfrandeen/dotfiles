@@ -13,18 +13,33 @@ function install {
     fi
 }
 
+
+
 # Basics
 install vim
 install neovim
 install vim-gtk3
 install screen
-install fzf
 install tree
 install git
 install curl
 install tmux
 install maim
 install pandoc
+
+# Terminal setup
+install terminator
+# Install terminator theme picker
+wget https://git.io/v5Zww -O $HOME"/.config/terminator/plugins/terminator-themes.py"
+
+# Install zsh & ohmyzh
+install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# fzf - install via git w/ bash script to get keybindings & latest version
+# important to install and run setup script _after_ zsh & terminator
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Developer stuff
 install gcc
