@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
 # Use vim keybindings
 # bindkey -v
 set -o vi
@@ -68,7 +67,7 @@ ZSH_THEME="robbyrussell"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -114,4 +113,17 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 source ~/.bash_aliases
 source ~/.bash_profile
 
-unset LESS;
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#
+# Modify the input line before it runs
+function lessify() {
+    if [[ "$BUFFER" =~ " --help$" ]] ; then
+        BUFFER="$BUFFER | bat -p -l help"
+    fi  
+    zle accept-line
+}
+
+zle -N lessify_widget lessify
+
+# Bind to the Enter key
+bindkey '^M' lessify_widget
