@@ -18,6 +18,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Show line numbers and relative line numbers
 set number
 set relativenumber
+set signcolumn=auto
 
 " Highlight current line
 set cursorline
@@ -47,6 +48,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'rust-lang/rust.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -58,7 +60,6 @@ colorscheme base16-gigavolt
 " Plugin-specific Settings
 " ================
 " coc.nvim
-set signcolumn=no
 set updatetime=300
 
 " Use tab for trigger completion with characters ahead and navigate
@@ -127,6 +128,9 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
+" Install coc extensions automatically:
+let g:coc_global_extensions = ['coc-calc', 'coc-css', 'coc-git', 'coc-sh', 'coc-html', 'coc-json', 'coc-pyright', 'coc-rust-analyzer']
+
 " EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
 let g:EasyMotion_smartcase = 1
@@ -137,6 +141,11 @@ map <Leader>k <Plug>(easymotion-k)
 syntax enable
 filetype plugin indent on
 let g:rustfmt_autosave=1
+
+" GitGutter 
+highlight GitGutterAdd guifg=#00FF00
+highlight GitGutterChange guifg=#00FFFF
+highlight GitGutterDelete guifg=#FF0000
 
 " Filetypes
 " ==================
