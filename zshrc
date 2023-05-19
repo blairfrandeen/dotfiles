@@ -82,7 +82,7 @@ plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Enable FZF keybindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+# source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # User configuration
 
@@ -111,7 +111,7 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Use bash aliases
 source ~/.bash_aliases
-source ~/.bash_profile
+# source ~/.bash_profile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #
