@@ -39,16 +39,25 @@ set scrolloff=5
 set ignorecase
 set smartcase
 
+" Status line set by lightline.vim, so turn off -- INSERT -- text
+set noshowmode
+
 " Plugins
 " ================
 call plug#begin()
 
+" Editor enhancements
 Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
-Plug 'rust-lang/rust.vim'
+
+"" GUI Enhancements
 Plug 'chriskempson/base16-vim'
+Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+"
+" Language-specific
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -146,6 +155,7 @@ let g:rustfmt_autosave=1
 highlight GitGutterAdd guifg=#00FF00
 highlight GitGutterChange guifg=#00FFFF
 highlight GitGutterDelete guifg=#FF0000
+nmap <leader>gp <Plug>(GitGutterPreviewHunk)
 
 " Filetypes
 " ==================
