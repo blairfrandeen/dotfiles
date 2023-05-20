@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Permanently swap caps and escape keys
+gsettings set org.gnome.desktop.input-sources xkb-options "['layout:us', 'caps:swapescape']"
+
 # Use vim keybindings
 # bindkey -v
 set -o vi
