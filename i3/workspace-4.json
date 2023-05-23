@@ -1,0 +1,50 @@
+// vim:ts=4:sw=4:et
+{
+    "layout": "splith",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 2096,
+       "width": 2670,
+       "x": 0,
+       "y": 64
+    },
+    "marks": [],
+    "name": "Visual Studio Code",
+    "percent": 0.7,
+    "swallows": [
+       {
+       "class": "^Code$"
+       }
+    ],
+    "type": "con"
+},
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 550,
+       "width": 882,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "blair@blair-XPS-15-9500:~",
+    "percent": 0.3,
+    "swallows": [
+       {
+        "class": "^X\\-terminal\\-emulator$"
+       }
+    ],
+    "type": "con"
+}
+
+    ]
+}
+

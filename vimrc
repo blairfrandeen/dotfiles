@@ -4,8 +4,8 @@
 let mapleader = ","
 
 " Move lines up or down
-nnoremap <c-j> ddjP
 nnoremap <c-k> ddkP
+nnoremap <c-j> ddjP
 inoremap <c-j> <esc>ddjPi
 inoremap <c-k> <esc>ddkPi
 
@@ -57,6 +57,7 @@ let &t_EI = "\e[2 q"
 
 " Code folding
 set foldmethod=syntax
+set foldlevel=99 " start with code unfolded
 
 " Stop code from unfoldign when I start a comment block
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
@@ -80,12 +81,17 @@ set mouse=a
 " Autoindent, tabs as four spaces
 set ai ts=4 sw=4 sts=4 et
 
-" Fix indentation for lines starting with #
-set cindent
-set cinkeys-=0#
-set indentkeys-=0#
-
 autocmd BufNewFile,BufRead * setlocal formatoptions=tcq
+
+" Remove backwards compatibility with vi
+set nocompatible
+
+" Keep the cursor off the bottom & top of the screen
+set scrolloff=5
+
+" Command completion
+set wildmenu
+set wildmode=list:longest
 
 
 " Plugin Settings
@@ -100,11 +106,12 @@ map <Leader>k <Plug>(easymotion-k)
 " Nerdcommenter
 let NERDSpaceDelims=1   " spaces around delimeters
 let g:NERDAltDelims_c=1 " use // instead of /* */ for C comments
+map gcc <plug>NERDCommenterToggle
 
 " File Specific Settings
 "===================
 " Enable filetype plugins
-filetype plugin on
+filetype plugin indent on
 
 " Markdown 
 " ------------------
@@ -151,6 +158,13 @@ command CR w | !gcc -Wall -g % && ./a.out
 " ------------------
 " Run rust program
 command U w | !cargo run
+syntax enable
+let g:rustfmt_autosave = 1
+
+" Fix indentation for lines starting with #
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 
 " Enable color scheme
 set t_Co=256

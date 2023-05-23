@@ -1,0 +1,51 @@
+[global_config]
+  geometry_hinting = True
+  title_transmit_fg_color = "#241f31"
+  title_transmit_bg_color = "#e5a50a"
+  always_split_with_profile = True
+  title_use_system_font = False
+  title_font = Fira Code weight=453 12
+[keybindings]
+  cycle_next = <Primary>Tab
+  cycle_prev = <Primary><Shift>Tab
+  go_next = <Primary><Shift>i
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  split_horiz = <Alt>s
+  split_vert = <Alt>v
+  paste = <Primary>v
+  page_up_half = <Alt>p
+  page_down_half = <Alt>n
+  line_up = <Shift><Alt>p
+  line_down = <Shift><Alt>n
+  resize_up = <Shift><Alt>k
+  resize_down = <Shift><Alt>j
+  resize_left = <Shift><Alt>h
+  resize_right = <Shift><Alt>l
+  next_tab = <Primary>Page_Up
+  prev_tab = <Primary>Page_Down
+  new_window = <Primary><Shift>n
+  layout_launcher = ""
+  preferences = <Primary>comma
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ebdbb2"
+    scrollbar_position = hidden
+    use_custom_command = True
+    custom_command = zsh
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

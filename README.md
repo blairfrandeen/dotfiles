@@ -14,3 +14,15 @@ Installation instructions:
 ## Files not covered by install script (windows)
 - Obsidian
 - Espanso
+
+## Adding a new dotfile (linux)
+1. Copy to dotfiles
+```sh
+cp ~/.config/terminator/config ~/dotfiles/terminator
+```
+2. Add the following to `dotinstall`:
+```sh
+ln -s ${BASEDIR}/terminator ~/.config/terminator/config
+```
+3. Run the above command
+

@@ -10,6 +10,7 @@ esac
 
 export FZF_DEFAULT_COMMAND="fdfind"
 export FZF_CTRL_T_COMMAND="fdfind"
+# source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -133,3 +134,4 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"

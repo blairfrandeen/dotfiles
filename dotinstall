@@ -21,9 +21,23 @@ ln -s ${BASEDIR}/vim ~/.vim
 ln -s ${BASEDIR}/bashrc ~/.bashrc
 ln -s ${BASEDIR}/bash_aliases ~/.bash_aliases
 ln -s ${BASEDIR}/inputrc ~/.inputrc
+ln -s ${BASEDIR}/zshrc ~/.zshrc
+ln -s ${BASEDIR}/bash_profile ~/.bash-profile
 
 #git
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
+
+# terminator
+mkdir ~/.config/terminator
+ln -s ${BASEDIR}/terminator ~/.config/terminator/config
+
+#i3
+ln -s ${BASEDIR}/dotfiles/i3 ~/.config/i3
+# i3 machine-specific configuration
+ln -s ${BASEDIR}/dotfiles/i3/$HOST.conf ~/.config/i3/machine.conf
+
+# espanso
+ln -s ${BASEDIR}/espanso ~/.config/espanso
 
 # Download submodules
 echo "Getting submodules..."
