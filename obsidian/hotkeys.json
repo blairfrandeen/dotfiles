@@ -190,5 +190,6 @@
       "key": "Z"
     }
   ],
-  "editor:toggle-checklist-status": []
+  "editor:toggle-checklist-status": [],
+  "editor:delete-paragraph": []
 }
