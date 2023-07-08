@@ -11,11 +11,11 @@ mkdir ${1}/.obsidian
 mkdir ${1}/.obsidian/snippets
 
 echo "Updating notes in $1"
-ln -sf ${BASEDIR}/obsidian.vimrc ${1}/.obsidian/obsidian.vimrc
-ln -sf ${BASEDIR}/app.json ${1}/.obsidian/app.json
-ln -sf ${BASEDIR}/appearance.json ${1}/.obsidian/appearance.json
-ln -sf ${BASEDIR}/hotkeys.json ${1}/.obsidian/hotkeys.json
-ln -sf ${BASEDIR}/obsidian.css ${1}/.obsidian/snippets/obsidian.css
-ln -sf ${BASEDIR}/community-plugins.json ${1}/.obsidian/community-plugins.json
+ln -sf ${BASEDIR}/obsidian/obsidian.vimrc ${1}/.obsidian/obsidian.vimrc
+ln -sf ${BASEDIR}/obsidian/app.json ${1}/.obsidian/app.json
+ln -sf ${BASEDIR}/obsidian/appearance.json ${1}/.obsidian/appearance.json
+ln -sf ${BASEDIR}/obsidian/hotkeys.json ${1}/.obsidian/hotkeys.json
+ln -sf ${BASEDIR}/obsidian/obsidian.css ${1}/.obsidian/snippets/obsidian.css
+ln -sf ${BASEDIR}/obsidian/community-plugins.json ${1}/.obsidian/community-plugins.json
 
 
