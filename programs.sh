@@ -49,6 +49,9 @@ install linux-tools-`uname -r`
 install pkg-config
 install libssl-dev
 install sqlite
+install libpq-dev
+install libmysqlclient-dev
+install libsqlite3-dev
 
 # Window manager
 install i3
