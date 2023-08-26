@@ -19,7 +19,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 set number
 set relativenumber
 set signcolumn=auto
-set nowrap
 
 " Highlight current line
 set cursorline
@@ -43,6 +42,8 @@ set smartcase
 " Status line set by lightline.vim, so turn off -- INSERT -- text
 set noshowmode
 
+set nocompatible
+
 " Plugins
 " ================
 call plug#begin()
@@ -51,12 +52,12 @@ call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "" GUI Enhancements
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
 "
 " Language-specific
 Plug 'rust-lang/rust.vim'
@@ -67,9 +68,6 @@ call plug#end()
 " ================
 set termguicolors
 colorscheme base16-gigavolt
-
-" Highlighting only works for installed languages. Run `TSInstall <language>`
-autocmd VimEnter * TSEnable highlight
 
 " Plugin-specific Settings
 " ================
@@ -182,4 +180,5 @@ function! s:md_settings()
 endfunction
 
 autocmd BufNew,BufEnter *.md call s:md_settings()
+" autocmd BufNew,BufEnter *.md set colorcolumn=0 nnoremap j gj nnoremap k gk
 
