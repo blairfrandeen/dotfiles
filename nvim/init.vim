@@ -15,6 +15,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Editor Options
 "===================
+" Use vim settings and not VI settings. Required for polylot
+set nocompatible
+
 " Show line numbers and relative line numbers
 set number
 set relativenumber
@@ -24,7 +27,7 @@ set signcolumn=auto
 set cursorline
 
 " Set line length marker
-set colorcolumn=100
+set colorcolumn=88
 
 " Use system clipboard
 " If not working, try the following command in terminal:
@@ -42,7 +45,6 @@ set smartcase
 " Status line set by lightline.vim, so turn off -- INSERT -- text
 set noshowmode
 
-set nocompatible
 
 " Plugins
 " ================
@@ -58,7 +60,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-"
+
 " Language-specific
 Plug 'rust-lang/rust.vim'
 
