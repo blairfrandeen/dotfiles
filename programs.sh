@@ -26,7 +26,7 @@ install curl
 install tmux
 install maim
 install pandoc
-
+    
 # Terminal setup
 install terminator
 # Install terminator theme picker
@@ -35,6 +35,12 @@ wget https://git.io/v5Zww -O $HOME"/.config/terminator/plugins/terminator-themes
 # Install zsh & ohmyzh
 install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Note: Setting zsh as the default shell sometimes breaks suspend/resume behavior
+# I don't know what the root of this is, but I still have zsh set as my main shell
+# in terminator, so setting the system shell back to bash doesn't have any day to day
+# effect, other than un-breaking what has been a very frustrating problem to debug
+sudo chsh -s /bin/bash 
 
 # fzf - install via git w/ bash script to get keybindings & latest version
 # important to install and run setup script _after_ zsh & terminator
