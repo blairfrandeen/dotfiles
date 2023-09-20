@@ -14,6 +14,11 @@ Set-Alias gpu GitPush
 Set-Alias grep rg
 Set-Alias actenv PythonActivateVenv
 
+# Activate a pipx virtual environment based on the current directory
+function actx {
+  $dirname = Split-Path -Leaf (Get-Location)
+  & ~\.local\pipx\venvs\$dirname\Scripts\activate.ps1
+}
 
 # Quality-Of-Life
 #################
