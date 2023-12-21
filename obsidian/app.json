@@ -23,5 +23,6 @@
   "useMarkdownLinks": false,
   "spellcheck": false,
   "showInlineTitle": false,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "readableLineLength": false
 }
