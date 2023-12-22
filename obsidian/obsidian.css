@@ -1,6 +1,6 @@
 /* Some variables */
 :root {
-	--font-monospace: 'Fira Code', monospace;
+    --font-monospace: 'Fira Code', monospace;
     --code-bg-color: #1a1a1a;
     --text-on-accent: #191a1b;
     --code-border-color: #aba6a6;
@@ -14,13 +14,15 @@
 .tree-item-self {
     --font-size: 1.2em;
 }
+
 body {
     --code-normal: #a5ccf3;
     --code-comment: #bfbfbf;
 }
 
 .theme-dark {
-    --text-on-accent: #161616 /* fix for subtlegold */
+    --text-on-accent: #161616
+        /* fix for subtlegold */
 }
 
 .cm-s-obsidian span.cm-comment {
@@ -31,11 +33,11 @@ body {
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
     color: #ded242;
     background-color: var(--code-bg-color);
-    border: .5px solid var(--code-border-color);
-    border-radius: 3px;
+    /* border: .5px solid var(--code-border-color); */
+    /* border-radius: 3px; */
     padding: .1rem .15rem;
-    font-size: 1.2rem;
-    vertical-align: baseline;
+    /* font-size: 1rem; */
+    vertical-align: top;
 }
 
 /* Code block formatting */
@@ -48,7 +50,7 @@ body {
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
     background-color: var(--code-block-background);
-    border-bottom:.5px solid var(--code-border-color);
+    border-bottom: .5px solid var(--code-border-color);
     border-radius: -5px;
     padding: .1rem .15rem;
     border-left: none;
@@ -69,15 +71,19 @@ body {
 .cm-header-1 {
     font-size: 1.8em;
 }
+
 .cm-header-2 {
     font-size: 1.6em;
 }
+
 .cm-header-3 {
     font-size: 1.4em;
 }
+
 .cm-header-4 {
     font-size: 1.2em;
 }
+
 .cm-header-5 {
     font-size: 1.0em;
 }
