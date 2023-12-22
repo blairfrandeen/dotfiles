@@ -26,6 +26,9 @@ set number
 set relativenumber
 set signcolumn=auto
 
+" Auto-indent, tabs as 4 spaces
+set ai ts=4 sw=4 sts=4 et
+
 " Highlight current line
 set cursorline
 
@@ -140,6 +143,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
+nmap <F2> <Plug>(coc-rename)
 "
 " Remap <C-f> and <C-b> to scroll float windows/popups
 if has('nvim-0.4.0') || has('patch-8.2.0750')
@@ -151,8 +155,21 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
+" CoC Extensions
+" ==============
 " Install coc extensions automatically:
-let g:coc_global_extensions = ['coc-calc', 'coc-css', 'coc-git', 'coc-sh', 'coc-html', 'coc-json', 'coc-pyright', 'coc-rust-analyzer']
+let g:coc_global_extensions = [
+    \'coc-calc', 
+    \'coc-clangd',
+    \'coc-css',
+    \'coc-git',
+    \'coc-html',
+    \'coc-json',
+    \'coc-pyright',
+    \'coc-rust-analyzer'
+    \'coc-sh',
+\]
+
 
 " EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
