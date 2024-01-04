@@ -233,5 +233,14 @@
       ],
       "key": "PageUp"
     }
-  ]
+  ],
+  "obsidian-kanban:toggle-kanban-view": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "K"
+    }
+  ],
+  "editor:insert-link": []
 }

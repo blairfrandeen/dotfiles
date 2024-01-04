@@ -15,6 +15,10 @@
     --font-size: 1.2em;
 }
 
+.markdown-preview-view {
+    padding: 0;
+}
+
 body {
     --code-normal: #a5ccf3;
     --code-comment: #bfbfbf;
