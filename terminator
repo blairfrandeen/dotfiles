@@ -5,8 +5,7 @@
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   suppress_multiple_term_dialog = True
   always_split_with_profile = True
-  title_use_system_font = False
-  title_font = Fira Code weight=453 12
+  title_font = Monaspace Krypton 12
 [keybindings]
   cycle_next = <Primary>Tab
   cycle_prev = <Primary><Shift>Tab
@@ -35,6 +34,7 @@
   [[default]]
     background_darkness = 1.0
     cursor_color = "#aaaaaa"
+    font = Monaspace Krypton Medium 10
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
@@ -42,6 +42,7 @@
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_custom_command = True
     custom_command = zsh
+    use_system_font = False
     bold_is_bright = True
   [[Kibble]]
     background_color = "#0e100a"
@@ -62,12 +63,14 @@
     background_type = transparent
     cursor_color = "#ff0018"
     cursor_color_fg = False
+    font = Monaspace Argon Medium 13
     foreground_color = "#fffaf4"
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
     use_custom_command = True
     custom_command = zsh
+    use_system_font = False
     bold_is_bright = True
 [layouts]
   [[default]]
