@@ -34,6 +34,10 @@ set cursorline
 
 " Set line length marker
 set colorcolumn=88
+set textwidth=88
+
+" Don't automatically add comments on newlines
+au FileType * set fo -=r fo -=o
 
 " Use system clipboard
 " If not working, try the following command in terminal:
