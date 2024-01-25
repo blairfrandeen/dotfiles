@@ -13,7 +13,7 @@ let mapleader =","
 nnoremap <leader>ev :split $MYVIMRC<cr>
 
 "Quickly source vimrc
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>v :source $MYVIMRC<cr>
 
 
 " Editor Options
@@ -202,6 +202,17 @@ function! s:md_settings()
 	colorscheme base16-atelier-forest
 endfunction
 
+" Everything Else
+function! s:code_settings()
+	nmap j <Down>
+	nmap k <Up>
+	set colorcolumn=88
+	set cursorline
+	set nolbr
+	execute "silent! CocEnable"
+	colorscheme base16-gigavolt
+endfunction
+
+autocmd BufNew,BufEnter * call s:code_settings()
 autocmd BufNew,BufEnter *.md call s:md_settings()
-" autocmd BufNew,BufEnter *.md set colorcolumn=0 nnoremap j gj nnoremap k gk
 
