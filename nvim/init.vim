@@ -60,6 +60,20 @@ au TabLeave * let g:lasttab = tabpagenr()
 nnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
 vnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
 
+" Use fzf to switch to an exiting tab
+nnoremap <silent> <c-p> :exe "Windows"<cr>
+
+" Use fzf as command finder
+nnoremap <silent> <leader>p :exe "Commands"<cr>
+
+" Use fzf to search for files in the current directory. Use ctrl+t to open in a new tab,
+" and use enter to open in current tab
+nnoremap <silent> <c-t> :exe "Files"<cr>
+
+" Use fzf to search for files in your home directory. Use ctrl+t to open in a new tab,
+" and use enter to open in current tab
+command! -bang AllFiles call fzf#vim#files('~/', <bang>0)
+nnoremap <silent> <leader>t :exe "AllFiles"<cr>
 
 " Plugins
 " ================
@@ -195,7 +209,6 @@ function! s:md_settings()
 	set colorcolumn=0
 	set nocursorline
 	set lbr
-	execute "silent! CocDisable"
 	colorscheme base16-atelier-forest
 endfunction
 
@@ -206,10 +219,9 @@ function! s:code_settings()
 	set colorcolumn=88
 	set cursorline
 	set nolbr
-	execute "silent! CocEnable"
 	colorscheme base16-gigavolt
 endfunction
 
-" autocmd BufNew,BufEnter * call s:code_settings()
-" autocmd BufNew,BufEnter *.md call s:md_settings()
+autocmd BufNew,BufEnter * call s:code_settings()
+autocmd BufNew,BufEnter *.md call s:md_settings()
 

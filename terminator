@@ -7,9 +7,11 @@
   always_split_with_profile = True
   title_font = Monaspace Krypton 12
 [keybindings]
+  new_tab = ""
   cycle_next = <Primary>Tab
   cycle_prev = <Primary><Shift>Tab
   go_next = <Primary><Shift>i
+  go_prev = ""
   go_up = <Alt>k
   go_down = <Alt>j
   go_left = <Alt>h
