@@ -55,6 +55,11 @@ set smartcase
 " Status line set by lightline.vim, so turn off -- INSERT -- text
 set noshowmode
 
+" Go to last active tab
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
+
 
 " Plugins
 " ================
