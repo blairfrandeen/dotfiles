@@ -2,23 +2,15 @@
 " =============
 let mapleader =","
 
-" Use tab to switch to matching bracket
-" note that this doesn't work since <TAB> and <C-i> are the
-" Same thing in vim. Would rather have <C-i> and <C-o> functionality
-" For moving forward and backward.
-" nnoremap <tab> %
-" vnoremap <tab> %
-
 "Quickly edit .vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
 
 "Quickly source vimrc
 nnoremap <leader>v :source $MYVIMRC<cr>
 
-
 " Editor Options
 "===================
-" Use vim settings and not VI settings. Required for polylot
+" Use vim settings and not VI settings. Required for polyglot
 set nocompatible
 
 " Show line numbers and relative line numbers
