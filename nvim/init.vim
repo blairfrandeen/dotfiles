@@ -67,9 +67,10 @@ call plug#begin()
 
 " Editor enhancements
 Plug 'tpope/vim-commentary'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'neovim/nvim-lspconfig'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 "" GUI Enhancements
 Plug 'chriskempson/base16-vim'
@@ -161,6 +162,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 END
+
+" FZF
+" Initialize configuration dictionary
+let g:fzf_vim = {}
+let g:fzf_vim.buffers_jump = 1
 
 " EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
