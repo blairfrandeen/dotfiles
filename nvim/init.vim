@@ -10,7 +10,7 @@ let mapleader =","
 " vnoremap <tab> %
 
 "Quickly edit .vimrc
-nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 
 "Quickly source vimrc
 nnoremap <leader>v :source $MYVIMRC<cr>
@@ -60,6 +60,18 @@ au TabLeave * let g:lasttab = tabpagenr()
 nnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
 vnoremap <silent> gl :exe "tabn ".g:lasttab<cr>
 
+" Use fzf to switch to an exiting tab
+nnoremap <silent> <c-p> :exe "Windows"<cr>
+
+" Use fzf to search for files in the current directory. Use ctrl+t to open in a new tab,
+" and use enter to open in current tab
+nnoremap <silent> <c-t> :exe "Files"<cr>
+
+" Use fzf to search for files in your home directory. Use ctrl+t to open in a new tab,
+" and use enter to open in current tab
+command! -bang AllFiles call fzf#vim#files('~/', <bang>0)
+nnoremap <silent> <leader>t :exe "AllFiles"<cr>
+
 
 " Plugins
 " ================
@@ -69,6 +81,8 @@ call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 "" GUI Enhancements
 Plug 'chriskempson/base16-vim'
@@ -89,7 +103,15 @@ colorscheme base16-gigavolt
 
 " Plugin-specific Settings
 " ================
+
+" fzf.vim
+" ----------------------
+" Initialize configuration dictionary
+let g:fzf_vim = {}
+let g:fzf_vim.buffers_jump = 1
+
 " coc.nvim
+" ----------------------
 set updatetime=300
 
 " Use tab for trigger completion with characters ahead and navigate
