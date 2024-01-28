@@ -276,9 +276,9 @@ function! s:md_settings()
 	set colorcolumn=0
 	set nocursorline
 	set lbr
-	colorscheme base16-atelier-forest
 endfunction
 
+"
 " Everything Else
 function! s:code_settings()
 	nmap j <Down>
@@ -286,7 +286,6 @@ function! s:code_settings()
 	set colorcolumn=88
 	set cursorline
 	set nolbr
-	colorscheme base16-gigavolt
 endfunction
 
 autocmd BufNew,BufEnter * call s:code_settings()
