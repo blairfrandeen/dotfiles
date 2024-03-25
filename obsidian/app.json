@@ -12,7 +12,7 @@
     "pageSize": "Letter",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 100
+    "downscalePercent": 54
   },
   "fileSortOrder": "byModifiedTime",
   "emacsyKeys": false,
@@ -21,7 +21,7 @@
   "livePreview": true,
   "autoPairMarkdown": false,
   "useMarkdownLinks": false,
-  "spellcheck": false,
+  "spellcheck": true,
   "showInlineTitle": false,
   "strictLineBreaks": false,
   "readableLineLength": false

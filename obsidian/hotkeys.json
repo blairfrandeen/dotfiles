@@ -242,5 +242,34 @@
       "key": "K"
     }
   ],
-  "editor:insert-link": []
+  "editor:insert-link": [],
+  "workspaces:load": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "L"
+    }
+  ],
+  "workspaces:save": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ],
+  "workspaces:open-modal": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "L"
+    }
+  ]
 }

@@ -1,8 +1,4 @@
 [
-  "obsidian-vimrc-support",
-  "obsidian-git",
-  "obsidian-relative-line-numbers",
-  "obsidian-omnivore",
-  "cycle-through-panes",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "obsidian-omnivore"
 ]
