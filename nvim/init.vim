@@ -26,7 +26,7 @@ set cursorline
 
 " Set line length marker
 set colorcolumn=88
-set textwidth=88
+set textwidth=0
 
 " Don't automatically add comments on newlines
 au FileType * set fo -=r fo -=o
