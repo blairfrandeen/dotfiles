@@ -100,7 +100,7 @@ call plug#end()
 " Theme
 " ================
 set termguicolors
-colorscheme base16-gigavolt
+colorscheme base16-gruvbox-dark-hard
 
 " Plugin-specific Settings
 " ================
