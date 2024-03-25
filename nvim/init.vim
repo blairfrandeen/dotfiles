@@ -67,6 +67,8 @@ nnoremap <silent> <c-t> :exe "Files"<cr>
 command! -bang AllFiles call fzf#vim#files('~/', <bang>0)
 nnoremap <silent> <leader>t :exe "AllFiles"<cr>
 
+let g:python3_host_prog = '/usr/bin/python3'
+
 " Plugins
 " ================
 call plug#begin()
@@ -94,6 +96,7 @@ Plug 'dstein64/nvim-scrollview'
 
 " Language-specific
 Plug 'rust-lang/rust.vim'
+Plug 'psf/black', {'branch': 'stable' }
 
 call plug#end()
 
@@ -277,6 +280,13 @@ function! s:md_settings()
 	set nocursorline
 	set lbr
 endfunction
+
+" Python
+" ==================
+augroup black_on_save
+	autocmd!
+	autocmd BufWritePre *.py Black
+augroup end
 
 "
 " Everything Else
