@@ -97,6 +97,7 @@ Plug 'dstein64/nvim-scrollview'
 " Language-specific
 Plug 'rust-lang/rust.vim'
 Plug 'psf/black', {'branch': 'stable' }
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
@@ -289,7 +290,9 @@ augroup black_on_save
 	autocmd BufWritePre *.py Black
 augroup end
 
-"
+" C/C++ auto formatting
+let g:clang_format#auto_format = 1
+
 " Everything Else
 function! s:code_settings()
 	nmap j <Down>
