@@ -59,6 +59,7 @@ install libpq-dev
 install libmysqlclient-dev
 install libsqlite3-dev
 install clangd-15
+install libstdc++-12-dev
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-15 100
 
 # Window manager
