@@ -218,22 +218,6 @@
       "key": "Tab"
     }
   ],
-  "workspace:next-tab": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "PageDown"
-    }
-  ],
-  "workspace:previous-tab": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "PageUp"
-    }
-  ],
   "obsidian-kanban:toggle-kanban-view": [
     {
       "modifiers": [
