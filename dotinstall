@@ -16,6 +16,7 @@ echo "Copying Blair's dotfiles from $BASEDIR..."
 # vim
 ln -s ${BASEDIR}/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim ~/.vim
+ln -s ${BASEDIR}/nvim ~/.config/nvim
 
 # bash
 ln -s ${BASEDIR}/bashrc ~/.bashrc
@@ -32,9 +33,9 @@ mkdir ~/.config/terminator
 ln -s ${BASEDIR}/terminator ~/.config/terminator/config
 
 #i3
-ln -s ${BASEDIR}/dotfiles/i3 ~/.config/i3
+ln -s ${BASEDIR}/i3 ~/.config/i3
 # i3 machine-specific configuration
-ln -s ${BASEDIR}/dotfiles/i3/$HOST.conf ~/.config/i3/machine.conf
+ln -s ${BASEDIR}/i3/$HOST.conf ~/.config/i3/machine.conf
 
 # espanso
 ln -s ${BASEDIR}/espanso ~/.config/espanso

@@ -5,7 +5,7 @@ sudo apt update
 function install {
     which $1 &> /dev/null
 
-    if [ $? -ne 0 ]; then
+   if [ $? -ne 0 ]; then
         echo "Installing: ${1}..."
         sudo apt install -y $1
     else
@@ -13,20 +13,54 @@ function install {
     fi
 }
 
+
+
 # Basics
 install vim
+install neovim
 install vim-gtk3
 install screen
-install fzf
 install tree
 install git
 install curl
-install gcc
 install tmux
+install maim
+install pandoc
+    
+# Terminal setup
+install terminator
+# Install terminator theme picker
+wget https://git.io/v5Zww -O $HOME"/.config/terminator/plugins/terminator-themes.py"
+
+# Install zsh & ohmyzh
+install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Note: Setting zsh as the default shell sometimes breaks suspend/resume behavior
+# I don't know what the root of this is, but I still have zsh set as my main shell
+# in terminator, so setting the system shell back to bash doesn't have any day to day
+# effect, other than un-breaking what has been a very frustrating problem to debug
+sudo chsh -s /bin/bash 
+
+# fzf - install via git w/ bash script to get keybindings & latest version
+# important to install and run setup script _after_ zsh & terminator
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# Developer stuff
+install gcc
 install linux-tools-common
 install linux-tools-generic
 install linux-tools-`uname -r`
-install pandoc
+install pkg-config
+install libssl-dev
+install sqlite
+install libpq-dev
+install libmysqlclient-dev
+install libsqlite3-dev
+install clangd-15
+install libstdc++-12-dev
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-15 100
 
 # Window manager
 install i3
@@ -34,9 +68,17 @@ install i3
 # Media processing
 install ffmpeg
 install lame
+install imagemagick
 
-# Make vim the default editor
-sudo update-alternatives --set editor /usr/bin/vim.basic
+# Make neovim the default editor
+sudo update-alternatives --set editor /usr/bin/nvim
+
+# Node.js for nvim/coc
+curl -sL install-node.vercel.app/lts | sudo bash
+# Install plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# Install vim plugins
+vim -c 'PlugInstall' -c 'qa!'
 
 # Python
 install ipython3
@@ -80,3 +122,13 @@ if [ $? -ne 0 ]; then
 else
     echo "GitHub CLI is already installed"
 fi
+
+# Espanso
+wget https://github.com/federico-terzi/espanso/releases/download/v2.1.8/espanso-debian-x11-amd64.deb
+install ./espanso-debian-x11-amd64.deb
+espanso service register
+espanso start
+
+# Obsidian
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.2.7/obsidian_1.2.7_amd64.deb
+install ./obsidian_1.2.7_amd64.deb

@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Permanently swap caps and escape keys
+gsettings set org.gnome.desktop.input-sources xkb-options "['layout:us', 'caps:swapescape']"
 
 # Use vim keybindings
 # bindkey -v
@@ -68,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -83,7 +85,7 @@ plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Enable FZF keybindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+# source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # User configuration
 
@@ -112,6 +114,19 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Use bash aliases
 source ~/.bash_aliases
-source ~/.bash_profile
+# source ~/.bash_profile
 
-unset LESS;
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#
+# Modify the input line before it runs
+function lessify() {
+    if [[ "$BUFFER" =~ " --help$" ]] ; then
+        BUFFER="$BUFFER | bat -p -l help"
+    fi  
+    zle accept-line
+}
+
+zle -N lessify_widget lessify
+
+# Bind to the Enter key
+bindkey '^M' lessify_widget

@@ -1,0 +1,28 @@
+{
+  "vimMode": true,
+  "showLineNumber": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "promptDelete": false,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "showFrontmatter": true,
+  "obsidianCss": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 54
+  },
+  "fileSortOrder": "byModifiedTime",
+  "emacsyKeys": false,
+  "showUnsupportedFiles": true,
+  "legacyEditor": false,
+  "livePreview": true,
+  "autoPairMarkdown": false,
+  "useMarkdownLinks": false,
+  "spellcheck": true,
+  "showInlineTitle": false,
+  "strictLineBreaks": false,
+  "readableLineLength": false
+}

@@ -4,6 +4,12 @@ Installation instructions:
 2. Run `./dotinstall` (Linux) or `install.bat` (Windows) - note that this may run into problems if any of the files listed below already exist.
 3. Make junctions for obsidian and espanso (windows)
 
+## Shell Scripts Included
+- projects.sh - clone projects stored on github to workspace directory
+- programs.sh - install my most commonly used programs
+- obsidian.sh - install Obsidian customizations
+- cargoinsta.sh - Rust programs :)
+
 ## Files covered by `dotinstall` script (linux only)
 - `.vimrc`
 - `.bashrc`

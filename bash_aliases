@@ -23,3 +23,10 @@ alias actenv="source venv/bin/activate"
 
 # automatically use gitignore with tree
 alias tree="tree --gitignore"
+
+# Use neovim
+alias vim="nvim"
+
+# The oxidation staarts here
+alias cat="bat"
+alias grep="rg"
