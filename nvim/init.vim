@@ -17,6 +17,7 @@ set nocompatible
 set number
 set relativenumber
 set signcolumn=auto
+set nowrap
 
 " Auto-indent, tabs as 4 spaces
 set ai ts=4 sw=4 sts=4 et

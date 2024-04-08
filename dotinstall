@@ -22,8 +22,10 @@ ln -s ${BASEDIR}/nvim ~/.config/nvim
 ln -s ${BASEDIR}/bashrc ~/.bashrc
 ln -s ${BASEDIR}/bash_aliases ~/.bash_aliases
 ln -s ${BASEDIR}/inputrc ~/.inputrc
-ln -s ${BASEDIR}/zshrc ~/.zshrc
 ln -s ${BASEDIR}/bash_profile ~/.bash-profile
+
+# fish shell
+ln -s ${BASEDIR}/fish/ ~/fish
 
 #git
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
@@ -34,6 +36,7 @@ ln -s ${BASEDIR}/terminator ~/.config/terminator/config
 
 #i3
 ln -s ${BASEDIR}/i3 ~/.config/i3
+
 # i3 machine-specific configuration
 ln -s ${BASEDIR}/i3/$HOST.conf ~/.config/i3/machine.conf
 
