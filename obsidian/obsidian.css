@@ -46,7 +46,7 @@ body {
     /* border-radius: 3px; */
     padding: .1rem .15rem;
     /* font-size: 1rem; */
-    vertical-align: top;
+    vertical-align: baseline;
 }
 
 /* Code block formatting */
