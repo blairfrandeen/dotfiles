@@ -13,7 +13,7 @@ abbr -a gs 'git status'
 abbr -a vim nvim
 abbr -a python python3
 abbr -a ipython ipython3
-abbr -a actenv 'source venv/bin/activate'
+abbr -a actenv 'source venv/bin/activate.fish'
 abbr -a cat bat
 abbr -a gl "git log --pretty=format:'%C(yellow)%h%C(reset) %s %C(cyan)%cd%C(reset) %C(blue)%an%C(reset) %C(green)%d%C(reset)' --date=format:'%a %b %e, %Y' --graph"
 abbr -a grep rg
