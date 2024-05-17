@@ -7,5 +7,7 @@
     "obsidian"
   ],
   "accentColor": "",
-  "showViewHeader": false
+  "showViewHeader": false,
+  "textFontFamily": "Monaspace Radon Var,Monaspace Neon Var",
+  "monospaceFontFamily": "FiraCode Nerd Font Mono"
 }
