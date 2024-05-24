@@ -94,6 +94,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'dstein64/nvim-scrollview'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Language-specific
 Plug 'rust-lang/rust.vim'
@@ -101,7 +102,13 @@ Plug 'psf/black', {'branch': 'stable' }
 Plug 'rhysd/vim-clang-format'
 
 call plug#end()
+let g:tmux_navigator_no_mappings = 1
 
+nnoremap <silent> {Left-Mapping} :<C-U>TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :<C-U>TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :<C-U>TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :<C-U>TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
 " Theme
 " ================
 set termguicolors

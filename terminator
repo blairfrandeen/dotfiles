@@ -14,8 +14,8 @@
   go_prev = ""
   go_up = <Alt>k
   go_down = <Alt>j
-  go_left = <Alt>h
-  go_right = <Alt>l
+  go_left = ""
+  go_right = ""
   split_horiz = <Alt>s
   split_vert = <Alt>v
   paste = <Primary>v
@@ -25,8 +25,8 @@
   line_down = <Shift><Alt>n
   resize_up = <Shift><Alt>k
   resize_down = <Shift><Alt>j
-  resize_left = <Shift><Alt>h
-  resize_right = <Shift><Alt>l
+  resize_left = ""
+  resize_right = ""
   next_tab = <Primary>Page_Up
   prev_tab = <Primary>Page_Down
   new_window = <Primary><Shift>n
