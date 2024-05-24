@@ -104,11 +104,11 @@ Plug 'rhysd/vim-clang-format'
 call plug#end()
 let g:tmux_navigator_no_mappings = 1
 
-nnoremap <silent> {Left-Mapping} :<C-U>TmuxNavigateLeft<cr>
-nnoremap <silent> {Down-Mapping} :<C-U>TmuxNavigateDown<cr>
-nnoremap <silent> {Up-Mapping} :<C-U>TmuxNavigateUp<cr>
-nnoremap <silent> {Right-Mapping} :<C-U>TmuxNavigateRight<cr>
-nnoremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+nnoremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
+
 " Theme
 " ================
 set termguicolors
