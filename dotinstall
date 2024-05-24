@@ -43,6 +43,10 @@ ln -s ${BASEDIR}/i3/$HOST.conf ~/.config/i3/machine.conf
 # espanso
 ln -s ${BASEDIR}/espanso ~/.config/espanso
 
+# tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
+
 # Download submodules
 echo "Getting submodules..."
 cd $BASEDIR
