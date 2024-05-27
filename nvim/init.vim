@@ -70,6 +70,12 @@ nnoremap <silent> <leader>t :exe "AllFiles"<cr>
 
 let g:python3_host_prog = '/usr/bin/python3'
 
+" Wrap and linebreak for Markdown
+nnoremap <leader>w :set lbr wrap<cr>
+nnoremap <leader>W :set nolbr nowrap<cr>
+
+nnoremap <leader>l :nohl<cr>
+
 " Plugins
 " ================
 call plug#begin()
