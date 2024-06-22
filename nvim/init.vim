@@ -129,6 +129,7 @@ colorscheme base16-gruvbox-dark-hard
 lua << END
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
+require'lspconfig'.tsserver.setup {}
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
