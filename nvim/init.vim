@@ -130,6 +130,11 @@ lua << END
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup {}
+require'lspconfig'.html.setup {}
+require'lspconfig'.cssls.setup {}
+require'lspconfig'.eslint.setup {}
+require'lspconfig'.jsonls.setup {}
+require'lspconfig'.vimls.setup {}
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
@@ -297,7 +302,7 @@ function! s:md_settings()
 	set lbr
 endfunction
 
-autocmd BufWritePre * lua vim.lsp.buf.format()
+autocmd BufWritePre * silent! lua vim.lsp.buf.format()
 
 " C/C++ auto formatting
 let g:clang_format#auto_format = 1
