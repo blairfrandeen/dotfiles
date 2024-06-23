@@ -61,7 +61,7 @@
     bold_is_bright = True
   [[Night Owl]]
     background_color = "#0e1019"
-    background_darkness = 0.95
+    background_darkness = 0.91
     background_type = transparent
     cursor_color = "#ff0018"
     cursor_color_fg = False

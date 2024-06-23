@@ -119,6 +119,8 @@ nnoremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
 " ================
 set termguicolors
 colorscheme base16-gruvbox-dark-hard
+" Transparent background (don't do this)
+hi Normal guibg=NONE ctermbg=NONE
 
 " Plugin-specific Settings
 " ================
