@@ -278,7 +278,6 @@ map <Leader>k <Plug>(easymotion-k)
 " rust.vim
 syntax enable
 filetype plugin indent on
-let g:rustfmt_autosave=1
 
 " GitGutter 
 highlight GitGutterAdd guifg=#00FF00
@@ -298,12 +297,7 @@ function! s:md_settings()
 	set lbr
 endfunction
 
-" Python
-" ==================
-augroup black_on_save
-	autocmd!
-	autocmd BufWritePre *.py Black
-augroup end
+autocmd BufWritePre * lua vim.lsp.buf.format()
 
 " C/C++ auto formatting
 let g:clang_format#auto_format = 1
