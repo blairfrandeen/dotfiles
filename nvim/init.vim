@@ -136,8 +136,24 @@ require'lspconfig'.html.setup {}
 require'lspconfig'.cssls.setup {}
 require'lspconfig'.eslint.setup {}
 require'lspconfig'.jsonls.setup {}
-require'lspconfig'.vimls.setup {}
-
+-- Configure `ruff-lsp`.
+-- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff_lsp
+-- For the default config, along with instructions on how to customize the settings
+local on_attach = function(client, bufnr)
+  if client.name == 'ruff_lsp' then
+    -- Disable hover in favor of Pyright
+    client.server_capabilities.hoverProvider = false
+  end
+end
+require('lspconfig').ruff_lsp.setup {
+  on_attach = on_attach,
+  init_options = {
+    settings = {
+      -- Any extra CLI arguments for `ruff` go here.
+      args = {},
+    }
+  }
+}
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
@@ -321,3 +337,4 @@ endfunction
 autocmd BufNew,BufEnter * call s:code_settings()
 autocmd BufNew,BufEnter *.md call s:md_settings()
 
+let g:vim_markdown_new_list_item_indent = 0
