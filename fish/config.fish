@@ -18,3 +18,8 @@ abbr -a cat bat
 abbr -a gl "git log --pretty=format:'%C(yellow)%h%C(reset) %s %C(cyan)%cd%C(reset) %C(blue)%an%C(reset) %C(green)%d%C(reset)' --date=format:'%a %b %e, %Y' --graph"
 abbr -a grep rg
 abbr -a ls exa
+
+# fly io
+set -x FLYCTL_INSTALL "/home/blair/.fly"
+set -x PATH "$FLYCTL_INSTALL/bin" $PATH
+
