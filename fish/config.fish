@@ -23,6 +23,11 @@ abbr -a gl "git log --pretty=format:'%C(yellow)%h%C(reset) %s %C(cyan)%cd%C(rese
 abbr -a grep rg
 abbr -a ls exa
 
+abbr -a confish 'nvim ~/dotfiles/fish/config.fish'
+abbr -a srfish 'source ~/.config/fish/config.fish'
+
+abbr -a dots 'cd ~/dotfiles'
+
 # fly io
 set -x FLYCTL_INSTALL "/home/blair/.fly"
 set -x PATH "$FLYCTL_INSTALL/bin" $PATH
