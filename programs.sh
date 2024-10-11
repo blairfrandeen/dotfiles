@@ -57,6 +57,8 @@ install libsqlite3-dev
 install clangd-15
 install libstdc++-12-dev
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-15 100
+install libxml2-dev
+install libxslt-dev
 
 # Window manager
 install i3
@@ -76,10 +78,14 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # Install vim plugins
 vim -c 'PlugInstall' -c 'qa!'
 
-# Python
+# Python / uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python install 3.10 3.11 3.12 3.13
+
 install ipython3
 install python3-pip
-install python3.10-venv
+install python3.13-venv
+install python-dev-is-python3
 pip install black --exists-action a -q
 
 # Rust

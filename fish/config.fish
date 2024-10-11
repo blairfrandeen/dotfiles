@@ -9,6 +9,10 @@ fish_vi_key_bindings
 bind --mode insert \cn down-or-search
 bind --mode insert \cp up-or-search
 
+if which python3.13 &> /dev/null
+    alias python3='uv run --python=3.13 python3'
+end
+
 abbr -a gs 'git status'
 abbr -a vim nvim
 abbr -a python python3
