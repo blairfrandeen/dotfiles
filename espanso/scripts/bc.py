@@ -26,5 +26,41 @@ def breadcrumb(note_date: date = date.today()) -> str:
     return "[[%s|<< Yesterday]] | [[%s| Tomorrow >>]]" % (prev_file, next_file)
 
 
+def has_breadcrumb(line: str) -> bool:
+    return (
+        line.startswith("[[")
+        and line.strip().endswith("| Tomorrow >>]]")
+        and "<< Yesterday]] | [[" in line
+    )
+
+
+def update_breadcrumbs(note_date: date):
+    dn_file = get_daily_note_path(note_date)
+    with open(dn_file, "r") as file:
+        lines = file.readlines()
+
+    if len(lines) < 2:
+        return False
+    bc_line = lines[1]
+    if has_breadcrumb(bc_line):
+        lines[1] = breadcrumb(note_date) + "\n"
+    else:
+        lines.insert(1, breadcrumb(note_date) + "\n")
+
+    with open(dn_file, "w") as file:
+        file.writelines(lines)
+
+    return True
+
+
+def update_all():
+    """Danger zone"""
+    num_updated = 0
+    for d in dates:
+        if update_breadcrumbs(d):
+            num_updated += 1
+    print("%d files updated!" % num_updated)
+
+
 if __name__ == "__main__":
     print(breadcrumb())
