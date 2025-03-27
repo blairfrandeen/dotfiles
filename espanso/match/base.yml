@@ -12,18 +12,8 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
-  # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
-
-  - trigger: ":#"
-    replace: "**Tags:**"
-
   - trigger: ":deg"
     replace: "°"
-
-  - trigger: ":wx"
-    replace: "https://jpl.webex.com/meet/frandeen"
 
   - trigger: ":pm" # Plus Minus
     replace: "±"
@@ -37,10 +27,6 @@ matches:
   - trigger: ':lol' # overrides :tears or something
     replace: "\U0001F602"
 
-  # Email symbol, used in task tracking
-  - trigger: ':@'
-    replace: "\U0001F4E9"
-
   - trigger: ":pos" # true position
     replace: "⌖"
 
@@ -51,14 +37,6 @@ matches:
   - trigger: ":cc"
     replace: ":%s/\\[x\\]/[ ]/g"
 
-  # Drawing Check Date. Start w/ drawing # & rev, e.g. 20033800_A
-  - trigger: ":cd"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "_CHK_BSF_%Y%m%d"
   # Today
   - trigger: ":date"
     replace: "{{mydate}}"
@@ -97,39 +75,17 @@ matches:
           format: "%Y-%m-%d"
           offset: 86400
 
-  # Linux breadcrumb
-  - trigger: ":yt"
-    replace: "[[{{yesterday}}|<< Yesterday]] | [[{{tomorrow}} | Tomorrow >>]]"
-    vars:
-      - name: yesterday
-        type: date
-        params:
-          format: "%Y-%m-%d"
-          offset: -86400
-      - name: tomorrow
-        type: date
-        params:
-          format: "%Y-%m-%d"
-          offset: 86400
-
   # Breadcrumb
   - trigger: ":bc"
     word: true
     replace: "{{output}}"
     vars:
       - name: output
-        type: shell
+        type: script
         params:
-          cmd: (echo "[[$((Get-Date).AddDays(-1) | Get-Date -UFormat "%Y-%m-%d")|<< Yesterday]] | [[$((Get-Date).AddDays(+1) | Get-Date -UFormat "%Y-%m-%d")|Tomorrow >>]]")
-
-  # Shell commands
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo Hello from your shell"
+          args:
+            - python3
+            - "%CONFIG%/scripts/bc.py"
 
 toggle_key: ALT
 show_notifications: true
