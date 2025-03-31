@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
+import argparse
+
 from datetime import date, timedelta
 from pathlib import Path
+from typing import Optional
 
 NOTES_DIR = Path.home() / "notes"
 
@@ -15,7 +18,8 @@ def get_daily_note_path(note_date: date) -> Path:
     return (NOTES_DIR / note_date.strftime("%Y-%m-%d")).with_suffix(".md")
 
 
-def breadcrumb(note_date: date = date.today()) -> str:
+def breadcrumb(note_date: Optional[date]) -> str:
+    note_date = note_date or date.today()
     prev_date = dates[dates.index(note_date) - 1]
     try:
         next_date = dates[dates.index(note_date) + 1]
@@ -63,4 +67,9 @@ def update_all():
 
 
 if __name__ == "__main__":
-    print(breadcrumb())
+    parser = argparse.ArgumentParser(description="Process a date.")
+    parser.add_argument(
+        "-d", "--date", type=date.fromisoformat, help="The date to process."
+    )
+    args = parser.parse_args()
+    print(breadcrumb(args.date))
