@@ -1,0 +1,5 @@
+return {
+  {
+    "astral-sh/ruff"
+  }
+}
