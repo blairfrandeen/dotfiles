@@ -106,7 +106,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Language-specific
 Plug 'rust-lang/rust.vim'
-Plug 'psf/black', {'branch': 'stable' }
 Plug 'rhysd/vim-clang-format'
 
 call plug#end()
@@ -133,7 +132,7 @@ hi Normal guibg=NONE ctermbg=NONE
 lua << END
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.tsserver.setup {}
+require'lspconfig'.ts_ls.setup {}
 require'lspconfig'.html.setup {}
 require'lspconfig'.cssls.setup {}
 require'lspconfig'.eslint.setup {}
@@ -142,24 +141,23 @@ require'lspconfig'.jsonls.setup {}
 -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff_lsp
 -- For the default config, along with instructions on how to customize the settings
 local on_attach = function(client, bufnr)
-  if client.name == 'ruff_lsp' then
+  if client.name == 'ruff' then
     -- Disable hover in favor of Pyright
     client.server_capabilities.hoverProvider = false
   end
 end
-require('lspconfig').ruff_lsp.setup {
-  on_attach = on_attach,
+require('lspconfig').ruff.setup {
   init_options = {
     settings = {
+		preview=true
       -- Any extra CLI arguments for `ruff` go here.
-      args = {},
     }
   }
 }
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
