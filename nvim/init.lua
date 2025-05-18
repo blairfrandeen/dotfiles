@@ -6,6 +6,8 @@ vim.keymap.set('n', '<leader>;', '<cmd>Lazy<cr>')
 vim.keymap.set('n', '<leader>s', '<cmd>source $MYVIMRC<cr>')
 vim.keymap.set('n', '<leader>e', '<cmd>e $MYVIMRC<cr>')
 vim.keymap.set('n', '<leader>l', '<cmd>nohl<cr>')
+vim.keymap.set('n', '<leader>i', '<cmd>LspInfo<cr>')
+vim.keymap.set('n', '<leader>r', '<cmd>LspRestart<cr>')
 vim.keymap.set('n', '<leader>w', function()
     vim.opt.wrap = not vim.opt.wrap:get()
 end, { desc = "Toggle Line Wrappring" })
@@ -39,7 +41,7 @@ vim.opt.scrolloff = 5
 -- Search is case insensitive when all lowercase, but case sensitive when
 -- search contains any caps.
 vim.opt.ignorecase = true
-vim.opt.smartcase = true	
+vim.opt.smartcase = true
 
 -- Auto-indent, tabs as 4 spaces
 vim.opt.ai = true
@@ -48,6 +50,18 @@ vim.opt.sw = 4
 vim.opt.sts = 4
 vim.opt.et = true
 
+-- Don't automatically add comments on newlines
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+        -- Explicitly set exactly which formatoptions you want
+        -- c - Auto-wrap comments using textwidth
+        -- q - Allow formatting comments with gq
+        -- j - Remove comment leader when joining lines
+        -- l - Don't break long lines in insert mode
+        vim.opt_local.formatoptions = "cqjl"
+    end,
+})
 -- LSP Configurations
 -- ==================
 vim.lsp.enable('clangd')
@@ -61,10 +75,10 @@ vim.lsp.enable('ruff')
 vim.lsp.enable('rust_analyzer')
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function()
-  vim.lsp.buf.format({ async = false })
-  end,
+    pattern = "*",
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
 })
 
 -- O
@@ -83,7 +97,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- -- Editor enhancements
 -- Plug('tpope/vim-commentary')
 -- Plug('easymotion/vim-easymotion')
--- Plug('junegunn/fzf', { ['do'] = function() 
+-- Plug('junegunn/fzf', { ['do'] = function()
 --     vim.fn['fzf#install()']()
 -- end })
 -- Plug('junegunn/fzf.vim')
