@@ -1,4 +1,14 @@
 require("config.lazy")
+local vim = vim
+
+vim.g.mapleader = ","
+vim.keymap.set('n', '<leader>;', '<cmd>Lazy<cr>')
+vim.keymap.set('n', '<leader>s', '<cmd>source $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>e', '<cmd>e $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>l', '<cmd>nohl<cr>')
+vim.keymap.set('n', '<leader>w', function()
+    vim.opt.wrap = not vim.opt.wrap:get()
+end, { desc = "Toggle Line Wrappring" })
 
 -- Editor Options
 -- ===================
@@ -38,39 +48,58 @@ vim.opt.sw = 4
 vim.opt.sts = 4
 vim.opt.et = true
 
-local vim = vim
-local Plug = vim.fn['plug#']
+-- LSP Configurations
+-- ==================
+vim.lsp.enable('clangd')
+vim.lsp.enable('cssls')
+vim.lsp.enable('eslint')
+vim.lsp.enable('html')
+vim.lsp.enable('jsonls')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('pyright')
+vim.lsp.enable('ruff')
+vim.lsp.enable('rust_analyzer')
 
-vim.call('plug#begin')
--- LSP and completion
-Plug('neovim/nvim-lspconfig')
-Plug('hrsh7th/cmp-nvim-lsp')
-Plug('hrsh7th/cmp-buffer')
-Plug('hrsh7th/cmp-path')
-Plug('hrsh7th/cmp-cmdline')
-Plug('hrsh7th/nvim-cmp')
-Plug('TabbyML/vim-tabby')
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function()
+  vim.lsp.buf.format({ async = false })
+  end,
+})
 
--- Editor enhancements
-Plug('tpope/vim-commentary')
-Plug('easymotion/vim-easymotion')
-Plug('junegunn/fzf', { ['do'] = function() 
-    vim.fn['fzf#install()']()
-end })
-Plug('junegunn/fzf.vim')
-
--- GUI Enhancements
-Plug('chriskempson/base16-vim')
-Plug('itchyny/lightline.vim')
-Plug('airblade/vim-gitgutter')
-Plug('sheerun/vim-polyglot')
-Plug('dstein64/nvim-scrollview')
-Plug('christoomey/vim-tmux-navigator')
-
--- Language-specific
-Plug('rust-lang/rust.vim')
-Plug('rhysd/vim-clang-format')
-
-vim.call('plug#end')
-
-
+-- O
+-- local Plug = vim.fn['plug#']
+--
+-- vim.call('plug#begin')
+-- -- LSP and completion
+-- Plug('neovim/nvim-lspconfig')
+-- Plug('hrsh7th/cmp-nvim-lsp')
+-- Plug('hrsh7th/cmp-buffer')
+-- Plug('hrsh7th/cmp-path')
+-- Plug('hrsh7th/cmp-cmdline')
+-- Plug('hrsh7th/nvim-cmp')
+-- Plug('TabbyML/vim-tabby')
+--
+-- -- Editor enhancements
+-- Plug('tpope/vim-commentary')
+-- Plug('easymotion/vim-easymotion')
+-- Plug('junegunn/fzf', { ['do'] = function() 
+--     vim.fn['fzf#install()']()
+-- end })
+-- Plug('junegunn/fzf.vim')
+--
+-- -- GUI Enhancements
+-- Plug('chriskempson/base16-vim')
+-- Plug('itchyny/lightline.vim')
+-- Plug('airblade/vim-gitgutter')
+-- Plug('sheerun/vim-polyglot')
+-- Plug('dstein64/nvim-scrollview')
+-- Plug('christoomey/vim-tmux-navigator')
+--
+-- -- Language-specific
+-- Plug('rust-lang/rust.vim')
+-- Plug('rhysd/vim-clang-format')
+--
+-- vim.call('plug#end')
+--
+--
