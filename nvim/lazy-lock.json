@@ -6,10 +6,9 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
   "cmp-path": { "branch": "main", "commit": "c6635aae33a50d6010bf1aa756ac2398a2d54c32" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
-  "error-lens.nvim": { "branch": "main", "commit": "e13b966dfd42517a92df1eb5d73fd14905e483a6" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
-  "fzf-lua": { "branch": "main", "commit": "66e620a7a724364809e78a1ae4b5bfe73e37df49" },
-  "gitsigns.nvim": { "branch": "main", "commit": "39e0d1cd44eafed5f30c372e377ab1cb1781ec9f" },
+  "fzf-lua": { "branch": "main", "commit": "8adf950093af5361621cf52208d64995b1af78b5" },
+  "gitsigns.nvim": { "branch": "main", "commit": "ee0606259ee5d5dd40398be26755048e8965086e" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "leap.nvim": { "branch": "main", "commit": "189102b07cdd24de3bd7132e57da8c9614c385fc" },
   "lightline.vim": { "branch": "master", "commit": "e358557e1a9f9fc860416c8eb2e34c0404078155" },
@@ -17,8 +16,7 @@
   "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
   "nvim-lspconfig": { "branch": "master", "commit": "ac1dfbe3b60e5e23a2cff90e3bd6a3bc88031a57" },
   "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" },
-  "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
-  "ruff": { "branch": "main", "commit": "dd04ca7f5885b7bc96303dbb5ce7635a039d2f93" },
-  "telescope.nvim": { "branch": "master", "commit": "b4da76be54691e854d3e0e02c36b0245f945c2c7" },
-  "vim-tmux-navigator": { "branch": "master", "commit": "33afa80db65113561dc53fa732b7f5e53d5ecfd0" }
+  "ruff": { "branch": "main", "commit": "b302d89da3325c705f87a8343a16aad1723b67ab" },
+  "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "64803fdd19a36211eba5e39f86c4cbceae8e1d06" }
 }

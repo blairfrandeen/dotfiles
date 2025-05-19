@@ -26,7 +26,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
-vim.opt.signcolumn = auto
+vim.opt.signcolumn = "auto"
 
 -- Highlight current line
 vim.opt.cursorline = true
@@ -81,39 +81,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
 })
 
--- O
--- local Plug = vim.fn['plug#']
---
--- vim.call('plug#begin')
--- -- LSP and completion
--- Plug('neovim/nvim-lspconfig')
--- Plug('hrsh7th/cmp-nvim-lsp')
--- Plug('hrsh7th/cmp-buffer')
--- Plug('hrsh7th/cmp-path')
--- Plug('hrsh7th/cmp-cmdline')
--- Plug('hrsh7th/nvim-cmp')
--- Plug('TabbyML/vim-tabby')
---
--- -- Editor enhancements
--- Plug('tpope/vim-commentary')
--- Plug('easymotion/vim-easymotion')
--- Plug('junegunn/fzf', { ['do'] = function()
---     vim.fn['fzf#install()']()
--- end })
--- Plug('junegunn/fzf.vim')
---
--- -- GUI Enhancements
--- Plug('chriskempson/base16-vim')
--- Plug('itchyny/lightline.vim')
--- Plug('airblade/vim-gitgutter')
--- Plug('sheerun/vim-polyglot')
--- Plug('dstein64/nvim-scrollview')
--- Plug('christoomey/vim-tmux-navigator')
---
--- -- Language-specific
--- Plug('rust-lang/rust.vim')
--- Plug('rhysd/vim-clang-format')
---
--- vim.call('plug#end')
---
---
+-- show diagnostics inline
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '●', -- Could be '■', '▎', 'x'
+    },
+    severity_sort = true,
+    float = {
+        source = "always", -- Or "if_many"
+    },
+})
