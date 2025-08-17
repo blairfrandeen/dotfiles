@@ -1,8 +1,7 @@
 [
   "obsidian-kanban",
-  "obsidian-omnivore",
   "omnisearch",
   "obsidian-relative-line-numbers",
   "cycle-through-panes",
-  "obsidian-vimrc-support"
+  "templater-obsidian"
 ]

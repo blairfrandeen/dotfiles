@@ -290,5 +290,14 @@
       ],
       "key": "E"
     }
+  ],
+  "templater-obsidian:create-Templates/00 Daily Notes Template.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "D"
+    }
   ]
 }
