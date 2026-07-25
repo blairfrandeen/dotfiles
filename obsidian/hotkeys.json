@@ -146,31 +146,17 @@
   "app:go-back": [
     {
       "modifiers": [
-        "Mod",
-        "Alt"
-      ],
-      "key": "ArrowLeft"
-    },
-    {
-      "modifiers": [
         "Mod"
       ],
-      "key": "ArrowLeft"
+      "key": "O"
     }
   ],
   "app:go-forward": [
     {
       "modifiers": [
-        "Mod",
-        "Alt"
-      ],
-      "key": "ArrowRight"
-    },
-    {
-      "modifiers": [
         "Mod"
       ],
-      "key": "ArrowRight"
+      "key": "I"
     }
   ],
   "editor:toggle-fold": [
@@ -291,6 +277,15 @@
       "key": "E"
     }
   ],
+  "sync:view-version-history": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ],
   "templater-obsidian:create-Templates/00 Daily Notes Template.md": [
     {
       "modifiers": [
@@ -298,6 +293,32 @@
         "Shift"
       ],
       "key": "D"
+    }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "editor:toggle-italics": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "I"
     }
   ]
 }

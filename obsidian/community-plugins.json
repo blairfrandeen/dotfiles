@@ -3,5 +3,6 @@
   "omnisearch",
   "obsidian-relative-line-numbers",
   "cycle-through-panes",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-vimrc-support"
 ]

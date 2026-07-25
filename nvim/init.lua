@@ -4,7 +4,7 @@ local vim = vim
 vim.g.mapleader = ","
 vim.keymap.set('n', '<leader>;', '<cmd>Lazy<cr>')
 vim.keymap.set('n', '<leader>s', '<cmd>source $MYVIMRC<cr>')
-vim.keymap.set('n', '<leader>e', '<cmd>e $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>v', '<cmd>e $MYVIMRC<cr>')
 vim.keymap.set('n', '<leader>l', '<cmd>nohl<cr>')
 vim.keymap.set('n', '<leader>i', '<cmd>LspInfo<cr>')
 vim.keymap.set('n', '<leader>r', '<cmd>LspRestart<cr>')
