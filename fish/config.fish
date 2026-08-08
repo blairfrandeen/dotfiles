@@ -37,6 +37,8 @@ set -x PATH "$FLYCTL_INSTALL/bin" $PATH
 set -x PATH "/usr/local/go/bin" $PATH
 # pi agent
 set -x PATH "/home/blair/agents" $PATH
+# vim
+set -x PATH "/opt/nvim-linux-x86_64/bin" $PATH
 
 # UV for python
 alias python3.8 'uv run --python=3.8 python3'

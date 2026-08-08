@@ -18,7 +18,6 @@ function install {
 
 # Basics
 install vim
-install neovim
 install vim-gtk3
 install screen
 install tree
@@ -28,6 +27,11 @@ install tmux
 install maim
 install pandoc
 install fish
+
+# neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 
 # Fonts
 curl -fLo "FiraCode Nerd Font Complete.otf" \
@@ -80,7 +84,7 @@ vim -c 'PlugInstall' -c 'qa!'
 
 # Python / uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
-uv python install 3.10 3.11 3.12 3.13
+uv python install 3.10 3.11 3.12 3.13, 3.14
 
 install ipython3
 install python3-pip
