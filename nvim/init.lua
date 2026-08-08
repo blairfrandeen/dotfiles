@@ -14,6 +14,7 @@ vim.keymap.set('n', '<leader>t', function()
 end, { desc = 'Save and compile TypeScript' })
 vim.keymap.set('n', '<leader>w', function()
     vim.opt.wrap = not vim.opt.wrap:get()
+    vim.opt.lbr = not vim.opt.lbr:get()
 end, { desc = "Toggle Line Wrappring" })
 -- JS comments:
 vim.keymap.set('n', '<leader>c', 'O/**<cr> *<cr>*/<esc>ka ')
