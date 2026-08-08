@@ -80,6 +80,7 @@ vim.lsp.enable('pyright')
 vim.lsp.enable('ruff')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('ts_ls')
+vim.lsp.enable('gopls')
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",

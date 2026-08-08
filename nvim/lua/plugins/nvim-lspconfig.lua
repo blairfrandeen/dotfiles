@@ -2,23 +2,23 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-        -- Optional dependencies
-        "hrsh7th/cmp-nvim-lsp",             -- For autocompletion
-        { "folke/neodev.nvim", opts = {} }, -- Lua LSP settings
+        "hrsh7th/cmp-nvim-lsp",
+        { "folke/neodev.nvim", opts = {} },
     },
     config = function()
-        -- Setup language servers
-        local lspconfig = require('lspconfig')
-
         -- Common LSP settings
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         if pcall(require, 'cmp_nvim_lsp') then
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
         end
 
-        -- Example: Setup for lua_ls (Lua)
-        lspconfig.lua_ls.setup({
+        -- Apply capabilities to every server enabled via vim.lsp.enable()
+        vim.lsp.config('*', {
             capabilities = capabilities,
+        })
+
+        -- Per-server overrides (only needed when customizing beyond defaults)
+        vim.lsp.config('lua_ls', {
             settings = {
                 Lua = {
                     diagnostics = { globals = { 'vim' } },
@@ -28,23 +28,17 @@ return {
             },
         })
 
-        -- Add more language servers as needed
-        -- lspconfig.tsserver.setup({capabilities = capabilities})
-        -- lspconfig.rust_analyzer.setup({capabilities = capabilities})
-
-        -- Global mappings
+        -- Global diagnostic mappings
         vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
         vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
         vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
         vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
-        -- Use LspAttach autocommand to only map the following keys
-        -- after the language server attaches to the current buffer
+        -- Buffer-local mappings once a server attaches
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
             callback = function(ev)
                 local opts = { buffer = ev.buf }
-
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
                 vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)

@@ -39,6 +39,8 @@ set -x PATH "/usr/local/go/bin" $PATH
 set -x PATH "/home/blair/agents" $PATH
 # vim
 set -x PATH "/opt/nvim-linux-x86_64/bin" $PATH
+# go
+set -x PATH "/home/blair/go/bin" $PATH
 
 # UV for python
 alias python3.8 'uv run --python=3.8 python3'
