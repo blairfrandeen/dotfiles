@@ -105,6 +105,13 @@ require("lazy").setup({
         lazy = true,
     },
     {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("nvim-tree").setup({})
+        end
+    },
+    {
         "ggandor/leap.nvim",
         enabled = true,
         keys = {
