@@ -12,6 +12,6 @@ cargo install ripgrep
 cargo install rustlings
 cargo install tokei
 cargo install ytop
-cargo install yazi
+cargo install --force yazi-build
 cargo install fd-find
 cargo install starship --locked
