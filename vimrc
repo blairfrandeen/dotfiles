@@ -169,6 +169,5 @@ set indentkeys-=0#
 " Enable color scheme
 set t_Co=256
 set background=dark
-autocmd vimenter * ++nested colorscheme gruvbox
 
 

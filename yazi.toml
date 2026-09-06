@@ -1,0 +1,7 @@
+[mgr]
+show_hidden = true
+
+[opener]
+edit = [
+    { run = "/usr/bin/nvim %s", block = true, for = "unix" }
+]
