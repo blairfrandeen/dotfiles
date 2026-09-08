@@ -109,6 +109,30 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require("nvim-tree").setup({})
+            -- If nvim tree is the last thing open, close it as well
+            -- ensure that I don't have to quit twice if I opened nvim tree
+            -- and never toggled it closed
+            vim.api.nvim_create_autocmd("QuitPre", {
+                callback = function()
+                    local tree_windows = {}
+                    local floating_windows = {}
+                    local all_windows = vim.api.nvim_list_wins()
+                    for _, win in ipairs(all_windows) do
+                        local bufname = vim.api.nvim_buf_get_name(vim.api.nvim_win_get_buf(win))
+                        if bufname:match("NvimTree_") ~= nil then
+                            table.insert(tree_windows, win)
+                        end
+                        if vim.api.nvim_win_get_config(win).relative ~= "" then
+                            table.insert(floating_windows, win)
+                        end
+                    end
+                    if 1 == #all_windows - #floating_windows - #tree_windows then
+                        for _, w in ipairs(tree_windows) do
+                            vim.api.nvim_win_close(w, true)
+                        end
+                    end
+                end,
+            })
         end
     },
     {
